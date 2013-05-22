@@ -5,7 +5,8 @@
 *.log 
 *.tmp 
 *.xref 
-*.pdx 
+*.pdx
+*.pdf
 *.pnd 
 *.bbl 
 *.bcf 
