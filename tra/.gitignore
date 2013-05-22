@@ -1,0 +1,9 @@
+# TeX/LaTeX intermediates # 
+########################### 
+*.pdf
+*.dvi
+*.aux
+*.gz
+*.log
+*.toc
+
