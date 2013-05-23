@@ -1,6 +1,6 @@
 # TeX/LaTeX intermediates # 
 ########################### 
-#*.pdf
+/*/*.pdf
 *.dvi
 *.aux
 *.gz
