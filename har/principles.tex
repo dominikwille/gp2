@@ -1,0 +1,108 @@
+\section{Physical Principles}
+To develop a equation of motion the Newtonian mechanics will be used. In principle there is a second order differential equation given by Newtons 2nd Law where \(a\) is the acceleration and \(m\) the mass of the moving part. In mathematical terms acceleration just means the second derivative after the time of the position \(x\). The discussed system has only one degree of freedom so all forces \(F\) and the position \(x\) are just scalars.
+\begin{align}
+F &= m \cdot a\notag\\
+ &= m \cdot \frac{d^2}{dt^2}x\notag\\
+ &= m \cdot \ddot x
+\label{2nd_law}
+\end{align}
+\subsection{Determining the Forces}
+\subsubsection{The Spring Force}
+Robert Hook first described the Force of a spring by its extension. He assumed that for small amplitudes the force will just be linear in the displacement. The spring force therefore is
+\begin{equation}
+F_s = -D \cdot \left( x - x_0 \right)
+\notag
+\end{equation}
+To make it more simple the coordinate system will be chosen so that \(x_o = 0 \). 
+\begin{equation}
+F_s = -D \cdot  x
+\label{spring}
+\end{equation}
+\subsubsection{Friction}
+To get a good approximation for the real motion of the system it is absolutely necessary to enter a friction force. A simple way to describe a friction force is to assume that it is linear in and only dependent on the velocity. The friction force will be
+\begin{equation}
+F_f = - k \cdot v
+\notag
+\end{equation}
+A velocity is just the first derivative after the time of the position so
+\begin{align}
+F_f &= - k \frac{d}{dt} x \notag \\
+ &= - k \dot x
+\label{friction}
+\end{align}
+The force \(F\) that acts on the mass \(m\) is the sum of all forces.
+\begin{align}
+F &= F_s + F_f \notag 
+\end{align}
+With \eqref{spring} and \eqref{friction}
+\begin{align}
+F &= -D x - k \dot x \notag
+\end{align}
+So equation of motion \eqref{2nd_law} becomes
+\begin{align}
+m\ddot{x} &= -D x - k \dot{x} \notag\\
+\Rightarrow 0 &= D x + k \dot{x} + m\ddot{x}
+\label{eom}
+\end{align}
+\subsection{Solving the Equation of Motion}
+The equation is a ordinary second order linear differential equation. In general all ordinary linear differential equations can be solved with the ansatz
+\begin{align}
+x(t) &= ae^{\lambda t} \notag\\
+\Rightarrow \dot{x}(t) &= a \lambda e^{\lambda t} \notag\\
+\Rightarrow \ddot{x}(t) &= a \lambda^2 e^{\lambda t} \notag
+\end{align}
+insertion into \eqref{eom} gives
+\begin{align}
+0 &= m a \lambda^2 e^{\lambda t} + k a \lambda e^{\lambda t} + D a e^{\lambda t} &\bigg\vert& \cdot \frac{1}{a} e^{- \lambda t} \notag\\
+0 &= m \lambda^2 + k \lambda + D &\bigg\vert& \cdot \frac{1}{m} \notag\\
+0 &= \lambda^2 + \frac{k}{m} \lambda + \frac{D}{m} && \notag
+\end{align}
+\begin{align}
+\omega_0 := \sqrt{\frac{D}{m}} & & \delta := \frac{k}{2m} \notag
+\end{align}
+\begin{align}
+0 &= \lambda^2 + 2\delta \lambda + \omega_0^2 \notag \\
+\lambda_{1/2} &= - \delta\, \pm\, \sqrt{\delta^2-\omega_0^2} \notag \\
+ &= - \delta\, \pm\, i\sqrt{\omega_0^2- \delta^2} \notag
+\end{align}
+The general solution is the linear combination of the two special solutions
+\begin{align}
+x(t) = a_1e^{\left(-\delta+i\sqrt{\omega_o^2-\delta^2} \right)t} + a_2e^{\left(-\delta-i\sqrt{\omega_o^2-\delta^2} \right)t}
+\label{x_norm}
+\end{align}
+\(x\) is the position of the mass, and therefore a real number so \(x(t)=x^*(t)\). For this Experiment the oscillating case \(\delta < \omega_0\) is realized, so \(\sqrt{\omega_o^2-\delta^2}\) is real.
+\begin{align}
+x^*(t) = a_1^*e^{\left(-\delta-i\sqrt{\omega_o^2-\delta^2} \right)t} + a_2^*e^{\left(-\delta+i\sqrt{\omega_o^2-\delta^2} \right)t}
+\label{x_konj}
+\end{align}
+Comparing \eqref{x_norm} and \eqref{x_konj} gives \(a_1^* = a_2\). In general every complex number can be written in the form \(Re^{i\varphi}\) so \(a_{1/2}\) can be too.
+\begin{align}
+a_1 &= \frac{A}{2} e^{i\varphi_0} && a_2 = \frac{A}{2} e^{-i\varphi_0} \notag
+\end{align}
+Inserting into \eqref{x_norm}
+\begin{align}
+x(t) &= \frac{A}{2} e^{i\varphi_0}e^{\left(-\delta+i\sqrt{\omega_o^2-\delta^2} \right)t} + \frac{A}{2} e^{-i\varphi_0}e^{\left(-\delta-i\sqrt{\omega_o^2-\delta^2} \right)t}\notag\\
+ &= Ae^{-\delta t} \left(\frac{1}{2} e^{i\left(\varphi_0+\sqrt{\omega_o^2-\delta^2}\right)t} + \frac{1}{2} e^{-i\left(\varphi_0+\sqrt{\omega_o^2-\delta^2}\right)t} \right)\notag\\
+  &= Ae^{-\delta t}\cos(\sqrt{\omega_o^2-\delta^2}t + \varphi_0)\notag
+\end{align}
+with
+\begin{equation}
+\omega_1 := \sqrt{\omega_o^2-\delta^2}
+\notag
+\end{equation}
+it gives the first form of the solution
+\begin{align}
+x(t) &= Ae^{-\delta t}\cos(\omega_1 t + \varphi_0)\label{x(t)_1}
+\end{align}
+There is an alternate form wich can be derived with angle identity \(\cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \).
+\begin{align}
+x(t) &= Ae^{-\delta t}\left( \cos(\varphi_0)\cos(\omega_1 t) - \sin(\varphi_0)\sin(\omega_1 t) \right) \notag
+\end{align}
+With
+\begin{align}
+A_1 &= A\cos(\varphi_0) && A_2 = -A\sin(\varphi_0) \notag
+\end{align}
+it becomes the alternate form
+\begin{align}
+x(t) &= e^{-\delta t}\left(A_1 \cos(\omega_1 t) + A_2 \sin(\omega_1 t) \right) \label{x(t)_2}
+\end{align}

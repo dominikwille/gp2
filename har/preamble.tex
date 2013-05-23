@@ -1,0 +1,41 @@
+\documentclass{article}
+%\usepackage{indentfirst}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
+\usepackage{amssymb,amstext,amsmath}
+\usepackage{graphicx}
+\usepackage{sectsty}
+\usepackage{multirow}
+\usepackage{dsfont}
+\usepackage{amsfonts}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage{dsfont}
+%\usepackage{titlesec}
+%\titleformat{\section}[hang]{\bfseries\sffamily \LARGE}{\thesection.}{.5em}{}[]
+%\titleformat{\subsection}[hang]{\bfseries\sffamily \large}{\thesubsection.}{.5em}{}[]
+%\titlespacing{\subsection}{\parindent}{*2}{\wordsep}
+%\allsectionsfont{\bfseries\sffamily}
+
+%the needed packages
+\usepackage[absolute]{textpos}
+\usepackage[texcoord]{eso-pic}
+
+%adjust the TPHorizModule and TPHorizModule units to the displayed mm %grid
+\TPGrid{210}{297}
+
+%puts a graphic at the absolute position described by the grid
+%#1 x, #2 y, #3 width, #4 height, #5 graphic
+\newcommand\putpic[5]{%
+        \begin{textblock}{#3}(#1,#2)
+  \includegraphics[width=#3\TPHorizModule]{#4}
+     \end{textblock}
+}
+
+%\renewcommand*{\size@chapter}{\Huge}
+
+\usepackage{cite}
+\usepackage{url}
