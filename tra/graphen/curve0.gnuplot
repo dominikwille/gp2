@@ -8,6 +8,8 @@ set output 'curve0.pdf'
 
 file(n) = sprintf("curve%d.data", n)
 
+set border 0
+
 set xzeroaxis
 set yzeroaxis
 set xrange [-16:16]
