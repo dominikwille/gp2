@@ -14,6 +14,7 @@ set xrange [-16:16]
 set yrange [-35:35]
 set x2range [160:-160]
 set y2range [1:-1]
+
 set label 'U_{CE}' at 14.5,1
 set label '[V]' at 14.7, -2
 set label 'I_B' at -15.5, 1
