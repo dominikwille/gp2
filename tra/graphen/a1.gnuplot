@@ -42,25 +42,30 @@ u(x) = 0.0015*x + 0.002
 i_c(x) = 0.008*x + 0.03
 i_b(x) = 0.008*x + 0.3
 
-#f(x) = a*x 
+f(x) = a*x 
 #fit f(x) file(20) using ($1/10):2:(i_b($1)):(i_c($2)) via a
-#fit f(x) file(20) using ($1/10):2 via a
-#a = a/10
+fit f(x) file(20) using ($1/10):2 via a
+a = a/10
+f(x) = x>=0 ? a*x : 1/0
 
+g(x) = b*x
+fit g(x) file(20) using ($1/10):3 via b
+b = b/10
+g(x) = x>=0 ? b*x : 1/0
 
 plot file(0) using 1:2:(u($1)):(i_c($2)) with xyerrorbars title 'I_B {/Symbol \273} 30 {/Symbol m}A' lt 1 pt 0 ,\
       file(1) using 1:2:(u($1)):(i_c($2)) with xyerrorbars title 'I_B {/Symbol \273} 60 {/Symbol m}A' lt 2 pt 0,\
       file(2) using 1:2:(u($1)):(i_c($2)) with xyerrorbars title 'I_B {/Symbol \273} 90 {/Symbol m}A' lt 3 pt 0,\
       file(3) using 1:2:(u($1)):(i_c($2)) with xyerrorbars title 'I_B {/Symbol \273} 120 {/Symbol m}A' lt 4 pt 0,\
-#      file(20) using 1:2:(i_b($1)):(i_c($2)) with xyerrorbars axes x2y1 title '' lt 5 pt 0,\
-#      f(x) axes x2y1 lt 5 lw 3 title 'U_{CE} {/Symbol \273} 12V ' ,\
+      file(20) using 1:2:(i_b($1)):(i_c($2)) with xyerrorbars axes x2y1 title '' lt 1 pt 0,\
+      f(x) axes x2y1 lt 6 lw 3 title 'U_{CE} {/Symbol \273} 12V ' ,\
       file(21) using 1:2:(i_b($1)):(i_c($2)) with xyerrorbars axes x2y1 title '' lt 2 pt 0,\
       file(22) using 1:2:(i_b($1)):(i_c($2)) with xyerrorbars axes x2y1 title '' lt 3 pt 0,\
       file(23) using 1:2:(i_b($1)):(i_c($2)) with xyerrorbars axes x2y1 title '' lt 4 pt 0,\
-      file(10) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 1 pt 0,\
-      file(11) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 2 pt 0,\
-      file(12) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 3 pt 0,\
-      file(13) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 4 pt 0,\
+      file(20) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 1 pt 0,\
+      file(21) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 2 pt 0,\
+      file(22) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 3 pt 0,\
+      file(23) using 1:3:(i_b($1)):(u($3)) with xyerrorbars axes x2y2 title '' lt 4 pt 0,\
       file(10) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 1 pt 0,\
       file(11) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 2 pt 0,\
       file(12) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 3 pt 0,\
