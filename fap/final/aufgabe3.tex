@@ -1,0 +1,87 @@
+\section{Aufgabe 3}
+Prinzipiell ist das Vorgehen bei der Ausführung identisch zu dem in Aufgabe 2. Bei der Auswertung ist jedoch nicht der Plattenabstand \(d\) sondern die Wellenlänge \(\lambda \) gesucht, die Formel \eqref{b} wird daher nach \(\lambda \) aufgelöst. Alexander Heinisch nahm die Messung mit blauen Filter vor, Dominik Wille die mit dem grünen Filter.
+\subsection{Fehlerabschätzung}
+Identisch zu Aufgabe 2 wird der Fehler des Radius' bestimmt aus
+\begin{align}
+\Delta r &= \frac{1}{2} \cdot \sqrt{
+\left( \frac{x_{i,links} - x_{a,links}}{2} \right)^2 +
+\left( \frac{x_{i,rechts} - x_{a,rechts}}{2} \right)^2
+} \notag
+\end{align}
+\begin{align}
+\Delta \left( r_0^2 - r_j^2 \right) &= \sqrt{
+\left( 2 r_0 \cdot \Delta r_0 \right)^2 +
+\left( 2 r_j \cdot \Delta r_j \right)^2
+} \notag
+\end{align}
+\subsection{Gegebenes}
+Um die Wellenlänge in dieser Aufgabe zu bestimmen, wird der ermittelte Plattenabstand \(d\) aus Aufgabe 2 verwendet. Die Gegeben Daten sind daher:
+\begin{center}
+\begin{tabular}{rcc}
+\(d\) & \(=\) & \(\left( 3,66 \pm 0,16 \right)\, mm\) \\
+\(f\) & \(=\) & \(\left( 10,0 \pm 0,5 \right)\, cm\) \\
+\end{tabular}
+\end{center}
+\subsection{Beobachtung}
+Qualitativ zeigte das Bild sowohl beim blauen als auch beim grünen Glas wieder Kreise in der Farbe des Filters, also in diesem Fall blau oder grün. Quantitativ waren die Kreise jedoch kleiner als bei dem roten Filter. Die blauen Kreise waren dabei am kleinsten.
+\subsection{Messwerte und Graphen}
+\begin{center}
+\input{blau_tab}
+{\it Tab. 3.1: Messwerte für das blaue Farbglas Phywe (8402)}
+\vspace{5mm}
+\\
+\input{gruen_tab}
+{\it Tab. 3.2: Messwerte für das grüne Farbglas Phywe (8404)}
+\\
+\includegraphics[width=12cm]{blau}
+{\it Abbildung. 3.1: Messwerte mit blauen Farbglas Phywe (8402) aufgetragen über \(j\)}
+\\
+\includegraphics[width=12cm]{gruen}
+{\it Abbildung. 3.2: Messwerte mit grünem Farbglas Phywe (8404) aufgetragen über \(j\)}
+
+\end{center}
+Die Steigungen \(b\) wurde mittels linearer Regression bestimmt zu:
+\begin{align}
+b_{blau} &= \left( 1,411 \pm 0,026 \right)\,mm^2 \notag\\
+b_{grün} &= \left( 1,846 \pm 0,022 \right)\,mm^2 \notag
+\end{align}
+\subsection{Auswertung}
+Um die Wellenlänge aus den gemessenen Daten bestimmen zu können, wird Gleichung \eqref{b} nach \(\lambda\) aufgelöst. Das ergibt:
+\begin{equation}
+\lambda = \frac{bd}{f^2} \notag
+\end{equation}
+Für den Fehler folgt daraus:
+\begin{align}
+\Delta \lambda &= \sqrt{
+\left( \frac{\partial \lambda}{\partial b} \cdot \Delta b \right)^2 +
+\left( \frac{\partial \lambda}{\partial f} \cdot \Delta f \right)^2
+} \notag \\
+&= \lambda \cdot \sqrt{
+\left( \frac{\Delta b}{b} \right)^2 +
+\left( \frac{2 \Delta f}{f}\right)^2
+} \notag
+\end{align}
+Ausgerechnet ergibt das:
+\begin{align}
+\lambda_{blau} &= \left( 516 \pm 13 \right)\, nm \notag \\
+\lambda_{grün} &= \left( 676 \pm 15 \right)\, nm \notag
+\end{align}
+
+Zum Vergleich gilt für die Literaturwerte:
+\begin{center}
+\includegraphics[width=\textwidth]{IMG_0020}
+{\it Abbildung. 3.3: Darstellung der Hauptmaxima einer Cadmium-Lampe}
+\end{center}
+
+
+\subsection{Fazit}
+\begin{align}
+\lambda_{blau} &= \left( 520 \pm 20 \right)\, nm \notag \\
+\lambda_{grün} &= \left( 680 \pm 20 \right)\, nm \notag
+\end{align}
+\begin{center}
+\it Endergebnis für \(\lambda_{blau}\) und \(\lambda_{grün}\)
+\end{center}
+Im Endergebnis wird klar, dass die Linien nicht zuordbar sind. Das hat verschiedene Ursachen. Zum einen ist die Messung des Plattenabstands \(d\) zu ungenau gewesen um eindeutige Zuordnungen zu gewährleisten, zum anderen sind die Ergebnisse nicht plausibel. Ein Grüner Filter sollte Emissionslinien mit kürzeren Wellenlängen passieren lassen als der rote Filter, die Ermittelte Wellenlänge beim grünen Filter ist aber länger. Und auch die mit dem blauen Filter ermittelte Wellenlänge passt nicht ins blaue Spektrum des sichtbaren Lichts.
+
+Zu sehen ist auch, dass Dominik Wille offensichtlich deutlich schlechter abgelesen hat als Alexander Heinisch, denn die Streuung der Messwerte ist beim grünen Filter am größten.
