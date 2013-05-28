@@ -10,6 +10,7 @@ Die einzelnen Komponenten wurden auf ein Steckbrett aufgebracht und mit Kabeln u
 \label{Schaltplan1}
 \end{minipage}
 \end{center}
+Als Stromquelle für die Basis diente eine normale Batterie, und für die Kollektorspannung ein regelbares \(12\, V\) Netzgerät. Alle anderen Komponenten wurden als Steckbrettkomponenten aus dem GP-Inventar in die Schaltung integriert.
 
 \subsection{Fehlerabschätzung}
 Als Grundlage für die Fehlerabschätzung werden die Herstellerangaben heran gezogen. Wie sich später zeigen wird, waren große systematische Fehler vorhanden, welche jedoch nicht mit der gaußschen Fehlerfortpflanzung betrachtet werden können. Benutzt wird daher: 
@@ -31,7 +32,8 @@ Aufgrund des immensen Zeitverlustes beim Aufbau für diese Aufgabe entschieden w
 \(P = U_{CE} \cdot I_C \) nicht das Kritische Maß von \(2\,W\) überstieg. Die Messung wurde jeweils für Basisströme 
 \(I_B = 30 \mu A, 60 \mu A, 90 \mu A, 120 \mu A\) durchgeführt.
 
-  
+\subsection{Beobachtung}
+Zu beobachten war, dass die Spannung \(U_{BE}\) bei Variation von \(U_{CE}\) keines wegs konstant blieb, die Aendereungen waren jedoch relativ klein. Bei der Messung von \(I_{C}\) war auch schon schnell zu sehen, dass die Messung nicht unseren Erwartungen entsprach, da die Werte sehr stark schwankten.
 
 \subsection{Messwerte}
 
@@ -53,6 +55,10 @@ Aufgrund des immensen Zeitverlustes beim Aufbau für diese Aufgabe entschieden w
 \vspace{0.5cm}
 \end{center}
 \subsection{Das statische Kennlinienfeld}
+Um die Daten im Rahmen der Aufgabe 1 auswerten zu können werden die Messwerte in ein Kennlinienfeld eingetragen. Dabei werden im 1. und 4. Quadranten alle Messwerte verwendet im 2. und 3. dagegen nur die mit einer Kollektorsoannung von \(U_{CE} \approx 12\,V \). Um den Anstieg des als linear angenommenen Verlaufs der Werte im 2. Quadranten zu bestimmen wurde die lineare Regression mit Fehler aus der Streuung verwendet. Das von GNU-Plot gelieferte Ergebnis ist:
+\begin{equation}
+\beta = 110 \pm 17
+\end{equation}
 \begin{center}
 \begin{minipage}{\linewidth}
 \centering
