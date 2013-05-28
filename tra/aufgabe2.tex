@@ -31,7 +31,7 @@ Unsere Messung ergaben folgende Werte:\\
 \input{tab_a2.2}
 \end{center}
 
-Nun tragen wir \(I_C\) gegen \(U_{CE}\) auf (Abbildung ) um die Kollektor-Widerstandsgerade. Um die Stromverstärkung \(\beta\) zu bestimmen, plotten wir \(I_C\)gegen \(I_B\). \(\beta\) können wir nun von der Steigung ablesen. Es ergibt sich:
+Nun tragen wir \(I_C\) gegen \(U_{CE}\) auf (Abbildung ) um die Kollektor-Widerstandsgerade. Um die Stromverstärkung \(\beta\) zu bestimmen, plotten wir \(I_C\)gegen \(I_B\). \(\beta\) können wir nun von der Steigung ablesen. Das Programm Mathematica liefert uns den Wert:
 
 \begin{equation}
 \notag
@@ -58,3 +58,13 @@ Nun tragen wir \(I_C\) gegen \(U_{CE}\) auf (Abbildung ) um die Kollektor-Widers
 \end{center}
 
 \subsection{Verstärkung eines Sinussignals}
+
+Nun bauen wir den Schaltplan aus Aufgabe 2.2 um und tauschen die zwei 2,2\(k\Omega\) und 22\(k\Omega\) gegen zwei 0.1\(\mu F\) Koppelkondensatoren. Die 1,5V Batterie wird gegen einen Funktionsgenerator ausgetauscht, welcher einen sinusförmigen Wechselstrom erzeugt. Über ein Oszilloskop können wir die Änderungen der Eingangs- bzw. Ausgangsspannungen beobachten. Die folgenden Ereignisse sind aufgetreten:
+
+\begin{itemize}
+\item Änderung der Eingangsspannung: Die Überlagerungsspannung wurde von 12V auf 3V verringert, wodurch die obere Enden der Sinuskurve abgeschnitten wurden. Dies ist auf den ''Verzerr-Effekt'' zurückzuführen, da der Transistor negative Ströme nicht durchlässt.
+\item Frequenzänderung: Die Frequenz wurde erhöht, was zur Folge hatte, dass die Verstärkung des Transistors verändert wurde und eine Phasenverschiebung von \(\frac{\pi}{2}\) Zustande kommt. Bei einer Verringerung der Frequenz wurde die Phasenverschiebung ebenfalls kleiner.
+\end{itemize}
+
+\newpage
+\subsection{Fazit}
