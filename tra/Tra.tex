@@ -129,8 +129,8 @@ U_{EC}=U_{BC}+U_{EB}
 \end{equation}
 
 Somit sind immer vier der sechs Variablen frei wählbar.
-Ist der Transistor in Emitterschaltung, so kann man ihn als Stromverstärker auffassen. In einem Vier-Quadranten-Kennlinienfeld wird die Abhängigkeit der vier Variablen dargestellt
-\newpage
+Ist der Transistor in Emitterschaltung, so kann man ihn als Stromverstärker auffassen. In einem Vier-Quadranten-Kennlinienfeld wird die Abhängigkeit der vier Variablen dargestellt\\
+
 Das Kennlienenfeld beinhaltete in diesen Quadranten folgende Inhalte:\\
 \begin{itemize}
 \item 1. Quadrant: Ausgangswiderstand ($U_{EC}$ über $I_C$) mit Arbeitswiderstand $R_A = \frac{-1}{m}$ (fallende Gerade mit Steigung m)
@@ -166,6 +166,12 @@ v=\frac{\Delta U_{EC}}{\Delta U_{EB}}=\frac{R_A \cdot \Delta I_C}{\Delta U_{EB}}
 \end{equation} 
 
 Dabei ist \(r_EB\) der differentielle Eingangswiderstand \(\Delta U_{EB}/\Delta I_B\).
+
+\subsection{Arbeitspunkt}
+Da ein Transistor nur im Bereich positiver Emitter-Basis-Ströme verstärkt, muss die Basis mit positivem Gleichstrom überlagert werden, um Wechselstromsignale unverzerrt weiterleiten zu können. Die wird durch den sogenannten ''Arbeitspunkt'' in den Kennlinienfeldern dargestellt. Man nimmt für ihn die halben maximal zulässigen Kollektorströme bzw. die halben Versorgungspannungen.
+
+\subsection{Stabilisierung}
+
 \newpage
 \section{Aufgaben}
 \subsection*{Aufgabe 1}
@@ -184,8 +190,30 @@ Basisvorwiderstandes und Bestimmung der Stromverstärkung.
 Experimentelle Überprüfung der Kollektor- Widerstandsgeraden durch Variation des
 Basisvorwiderstandes und Bestimmung der Stromverstärkung.
 
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{bilder/tra5}}
+\captionof{figure}{Schaltplan für Aufgabe 1}%
+\label{Schaltplan1}
+\end{minipage}
+\end{center}
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{bilder/tra6}}
+\captionof{figure}{Schaltplan für Aufgabe 2}%
+\label{Schaltplan2}
+\end{minipage}
+\end{center}
+
 \input{aufgabe1}
 
+\newpage
+\input{aufgabe2}
+
+\newpage
 \section{Qellenangabe}
 \begin{itemize}
 \item GPII-Skript
