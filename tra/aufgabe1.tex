@@ -69,11 +69,29 @@ m = 110 \pm 17
 \end{center}
 \subsection{Auswerung}
 \subsubsection{erster Quadarnt}
+Durch Vergleich mit dem idealisiertem Transistor in Abbildung \ref{kennlinienfeld} wird deutlich, dass der Verlauf von \(I_C\) auf \(U_{CE}\) nicht den Erwartungen entspricht. Der Strom bei den Messungen mit \(I_B \approx 90 \mu A\) und \(I_B \approx 120 \mu A\) bricht ab einer Kollektorspannung von \(U_{CE} \approx 5\, V\) ein. Ausserdem zeigt auch der Verlauf mit \(I_B \approx 60 \mu A\) zwei Ausreißer und der mit \(I_B \approx 30 \mu A\) faellt ab, obwohl \(I_C\) mit steigedenem \(U_{CE}\) steigen sollte.
 \subsubsection{zweiter Quadrant}
 Die Ermittelte steigung \(m\) entspricht genau dem Verstärkungsfaktor \(\beta = \frac{I_C}{I_B}\) daher ist der Gemessene Wert:
 \begin{equation}
-\beta = m = 110 \pm 17
+\beta = m = 110 \pm 17 \notag
 \end{equation}
 Da nur Werte für 4 verschiedene \(I_{B}\) aufgenommen wurden ist die Bestimmung vom Verstärkungsfaktor recht unsicher. Außerdem ist auch offensichtlich, dass bei der Messung mit \(I_B \approx 60 \mu A\) etwas anders gelaufen ist als bei den anderen Basisströmen; Der Wert ist ein Ausreißer.
 \subsubsection{dritter Quadrant}
+Wie auch schon im 1. und 2. Quadranten zeigt der gemessene Wert bei \(I_B \approx 60 \mu A\) einen Ausreißer. Ob der Verlauf der Kurve ansonsten der idealisierten Kurve entspricht lässt sich nicht sagen, da nur 4 Messwerte vorhanden sind.  
+
+Um Werte für \(r_{EB}\) zu erhalten werden die drei Differenzen von \(U_{BE}\) und \(I_{B}\) genutzt, da im allgemeinen dieser Widerstand in diesem Fall nicht konstant ist.
+\begin{center}
+\begin{tabular}{c|c|c}
+\(\Delta U_{BE}\, [\mu A]\) & \(\Delta I_B\, [V]\) &  \(r_{EB}\, [\Omega]\) \\\hline
+34,9 - 63,5 & 0,352 - 0,702 & 13200\\
+63,5 -104,5 & 0,702 - 0,59 & 2670\\
+104,5 - 140,8 & 0,59 - 0,61 & 567
+\end{tabular}
+\captionof{table}{Werte fuer \(r_{EB}\)}
+\end{center}
+dabei wurde \(r_{EB}\)berechnet wie:
+\begin{equation}
+r_{EB} = \frac{U_{BE_1}-U_{BE_2}}{I_{B_1}-I_{B_2}}
+\end{equation}
 \subsubsection{vierter Quadrant}
+Der verlauf der Kurven entspricht im Allgemeinen den Erwartungen. Das die Kurev ansteigen hat damit zutun, dass bei realen Transistoren immer auch ein teil der Kollektorspannung über die Basis abfließt. Der Sprung von \(U_{BE}\) bei der Messung mit \(I_B \approx 30 \mu A\) ist ziemlich eindeutig auf den Tausch des Messgeräts zurückzuführen.
