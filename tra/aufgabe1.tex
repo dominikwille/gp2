@@ -1,34 +1,53 @@
 \newpage
 \section{Aufgabe 1}
 \subsection{Aufbau}
-Die einzelnen Komponenten wurden auf ein Steckbrett aufgebracht und mit Kabeln und Steckverbindern miteinander verbunden. Die Spannungen \(U_{CE}\) und \(U_{BE}\) wurden jeweils mit einem  {\it Fluke 175} gemessen, die Stroeme \(I_B\) und \(I_C\) jeweils mit einem  {\it Voltcraft VC220}. Die Fehler der Messgeraete betragen laut Herstellerangaben:
+Die einzelnen Komponenten wurden auf ein Steckbrett aufgebracht und mit Kabeln und Steckverbindern miteinander verbunden. Die Spannungen \(U_{CE}\) und \(U_{BE}\) wurden jeweils mit einem  {\it Fluke 175} gemessen, die Ströme \(I_B\) und \(I_C\) jeweils mit einem  {\it Voltcraft VC220}. Aufgebaut wurde folgender Schaltplan:
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{bilder/tra5}}
+\captionof{figure}{Schaltplan für Aufgabe 1}%
+\label{Schaltplan1}
+\end{minipage}
+\end{center}
+
+\subsection{Fehlerabschätzung}
+Als Grundlage für die Fehlerabschätzung werden die Herstellerangaben heran gezogen. Wie sich später zeigen wird, waren große systematische Fehler vorhanden, welche jedoch nicht mit der gaußschen Fehlerfortpflanzung betrachtet werden können. Benutzt wird daher: 
 \begin{center}
 \begin{tabular}{c|c|c|c}
-Messgeraet & Messgroesse & Messbeereich & Fehlerangabe\\\hline
+Messgerät & Messgröße & Messbereich & Fehlerangabe \\\hline
 Fluke 175 & \(U_{CE}\) & \(1\, V\) & \(0,8\% +3d\) \\
 Fluke 175 & \(U_{CE}\) & \(1\, V\) & \(0,8\% +3d\) \\
 Voltcraft VC220 & \(I_{B}\) & \(200 \, \mu A \) & \(\ 0,15\% +2d\) \\
 Voltcraft VC220 & \(I_{C}\) & \(20 \, mA \) & \(\ 0,15\% +2d\)
 \end{tabular}
+\captionof{table}{Fehlerangaben von den Herstellern der Messgeräte}
 \end{center}
-\begin{center}
 
+\subsection{Durchführung}
+Nachdem alle Geräte aufgebaut, eingeschaltet und eingestellt waren, wurde mit der Messung begonnen. Die Messung verlief von Anfang an äußerst durchwachsen. Das Messgerät, dass \(I_B\) messen sollte zeigte Werte in einer völlig falschen Größenordnung an und es war lange nicht klar, was die Ursache dafür war. Erst nach langen testen und einem kompletten Neuaufbau der Schaltung stellten wir fest, dass das Messgerät selber offensichtlich falsche Werte anzeigte. Das Messgerät wurde noch vor dem ersten notierten wert getauscht. Nachdem das erledigt war wurde mit der Aufnahme von Messwerten begonnen. Die Spannung \(U_{CE}\)
+
+\subsection{Messwerte}
+
+\begin{center}
 \input{tab_30}
-\captionof{table}{Rohmesswerte bei \(I_B \approx 30 \mu A\)}
+\captionof{table}{Rohmesswerte vom statischen Kennlinienfeld bei \(I_B \approx 30 \mu A\)}
 \vspace{0.5cm}
 
 \input{tab_60}
-\captionof{table}{Rohmesswerte bei \(I_B \approx 60 \mu A\)}
+\captionof{table}{Rohmesswerte vom statischen Kennlinienfeld bei \(I_B \approx 60 \mu A\)}
 \vspace{0.5cm}
 
 \input{tab_90}
-\captionof{table}{Rohmesswerte bei \(I_B \approx 90 \mu A\)}
+\captionof{table}{Rohmesswerte vom statischen Kennlinienfeld bei \(I_B \approx 90 \mu A\)}
 \vspace{0.5cm}
 
 \input{tab_120}
-\captionof{table}{Rohmesswerte bei \(I_B \approx 120 \mu A\)}
+\captionof{table}{Rohmesswerte vom statischen Kennlinienfeld bei \(I_B \approx 120 \mu A\)}
 \vspace{0.5cm}
-
+\end{center}
+\subsection{Das statische Kennlinienfeld}
+\begin{center}
 \begin{minipage}{\linewidth}
 \centering
 \makebox[0cm]{\includegraphics[width=20cm]{graphen/curve0}}
@@ -36,3 +55,4 @@ Voltcraft VC220 & \(I_{C}\) & \(20 \, mA \) & \(\ 0,15\% +2d\)
 \label{gnuplot_kennlinienfeld}
 \end{minipage}
 \end{center}
+\subsection{Auswerung}
