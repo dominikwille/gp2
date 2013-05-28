@@ -1,25 +1,25 @@
-\section{Aufgabe 2.1}
+\section{Aufgabe 2}
 \subsection{Abschätzung des Arbeitswiderstandes}
 
-Um den Arbeitswiderstand zu bestimmen, benutzen wir das Vier-Quadranten-Kennlinienfeld (Anhang Abbildung 2.1) und gehen vom äußersten Punkt des dritten Quadranten für \(I_B\)= 140,8\(\mu A\) senkrecht nach oben. Im Zweiten Quadranten treffen wir so den Wert für \(I_C\)=13,9 mA, welches unser Startpunkt der Arbeitsgeraden (bzw. Kollektor-Widerstandsgerade) sein wird. Damit ergeben sich die Koordinaten (\(U_{CE}\) = 0[V], \(I_{C}\) = 13,9[mA]) für den Punkt \(P_1\) des Kurzschlussfalls. Der Punkt \(P_2\) liegt bei den Koordinaten (\(I_{C}\) = 0 [mA],\\
-\(U_{CE}\) = 12[V]), weil 12[V] die maximale Versorgungsspannung betrug.\\
-Der Arbeitspunkt \(P_{A}\) liegt laut Definition bei \(\left(\frac{U_{CE}}{2}, \frac{I_{C}}{2}\right)\), welches bei uns den Werten (6.055[V],11.7[mA]) entspricht.\\
+Um den Arbeitswiderstand zu bestimmen, benutzen wir das Vier-Quadranten-Kennlinienfeld (Abbildung 7) und gehen vom äußersten Punkt des dritten Quadranten für \(I_B\)= 140,8\(\mu A\) senkrecht nach oben. Im Zweiten Quadranten treffen wir so den Wert für \(I_C\)=13,9 mA, welches unser Startpunkt der Arbeitsgeraden (bzw. Kollektor-Widerstandsgerade) sein wird. Damit ergeben sich die Koordinaten (\(U_{CE}\) = 0[V], \(I_{C}\) = 13,9[mA]) für den Punkt \(P_1\) des Kurzschlussfalls. Der Punkt \(P_2\) liegt bei den Koordinaten (\(I_{C}\) = 0 [mA],\(U_{CE}\) = 12[V]), weil 12[V] die maximale Versorgungsspannung betrug.\\
+Der Arbeitspunkt \(P_{A}\) liegt laut Definition bei \(\left(\frac{U_{CE}}{2}, \frac{I_{C}}{2}\right)\), welches bei uns den Werten (6.055[V],6.95[mA]) entspricht.\\
 
 Den Arbeitswiderstand wird über die Formel:
 \begin{equation}
 \notag
-R_{A}=\mid \frac{1}{m}\mid = \left(\frac{U_{EC}}{I_C}\right) = 517.54 \Omega
+R_{A}=\mid \frac{1}{m}\mid = \left(\frac{U_{EC}}{I_C}\right) = 871.23 \Omega
 \end{equation}\\
-Auch wenn es sich um einen abgeschätzten Wert handelt, berechnen wir den Fehler über die Gauß'sche Fehlerfortpflanzung:
-\begin{equation}
-\notag
-\Delta R_{A}=\sqrt{\left(\frac{\Delta I_C}{I_C}\right)^2+\left(\frac{\Delta U_{EC}}{U_{EC}}\right)^2}\cdot R_{A} = 4.53\Omega
-\end{equation}
 
 Während des Versuchs haben wir für den Arbeitswiderstand einen Wert von (\(464.3\pm 2.6)\Omega\) gemessen.\\
 
 Der Basisvorwiderstand ergibt sich aus der Formel:
 \begin{equation}
 \notag
-R_V= \frac{U_{EC}-U_{EB}}{I_B}=\frac{6V-0.59V}{(113.4\cdot 10^{-6})A}=47.71k\Omega
+R_V= \frac{U_{EC}-U_{EB}}{I_B}=\frac{6V-0.7V}{(63.5\cdot 10^{-6})A}=83.5k\Omega
 \end{equation}
+
+Hier hatten wir einen Wert von (\(100.2\pm 0.8)k\Omega\) gemessen. Auf die Unterschiede dieser Werte werden wir später in der Diskussion eingehen.
+
+\subsection{Überprüfung der Kollektor-Widerstandsgeraden}
+
+Nun überprüfen wir die abgeschätzten Werte, indem wir einen Arbeitswiderstand und einen Basisvorwiderstand in die Schaltung einbauen (siehe Abbildung 6) und eine neue Messreihe aufnehmen. Wir steigern dabei die Werte für \(I_B\) in gleichen Abständen und notieren, wie sich die anderen Größen dazu verhalten. \(U_0\) hielten wir konstant auf (\(12.11\pm 0.09\))V
