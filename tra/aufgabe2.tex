@@ -1,7 +1,7 @@
 \section{Aufgabe 2}
 \subsection{Abschätzung des Arbeitswiderstandes}
 
-Um den Arbeitswiderstand zu bestimmen, benutzen wir das Vier-Quadranten-Kennlinienfeld (Abbildung 7) und gehen vom äußersten Punkt des dritten Quadranten für \(I_B\)= 140,8\(\mu A\) senkrecht nach oben. Im Zweiten Quadranten treffen wir so den Wert für \(I_C\)=13,9 mA, welches unser Startpunkt der Arbeitsgeraden (bzw. Kollektor-Widerstandsgerade) sein wird. Damit ergeben sich die Koordinaten (\(U_{CE}\) = 0[V], \(I_{C}\) = 13,9[mA]) für den Punkt \(P_1\) des Kurzschlussfalls. Der Punkt \(P_2\) liegt bei den Koordinaten (\(I_{C}\) = 0 [mA],\(U_{CE}\) = 12[V]), weil 12[V] die maximale Versorgungsspannung betrug.\\
+Um den Arbeitswiderstand zu bestimmen, benutzen wir das Vier-Quadranten-Kennlinienfeld (Abbildung 7) und gehen vom äußersten Punkt des dritten Quadranten für \(I_B\)= 140,8\(\mu A\) senkrecht nach oben. Im Zweiten Quadranten treffen wir so den Wert für \(I_C\)=13,9 mA, welches unser Startpunkt der Arbeitsgeraden (bzw. Kollektor-Widerstandsgerade) sein wird. Damit ergeben sich die Koordinaten (\(U_{CE}\) = 0[V], \(I_{C}\) = 13,9[mA]) für den Punkt \(P_1\) des Kurzschlussfalls. Der Punkt \(P_2\) liegt bei den Koordinaten (\(I_{C}\) = 0 [mA], \(U_{CE}\) = 12[V]), weil 12[V] die maximale Versorgungsspannung betrug.\\
 Der Arbeitspunkt \(P_{A}\) liegt laut Definition bei \(\left(\frac{U_{CE}}{2}, \frac{I_{C}}{2}\right)\), welches bei uns den Werten (6.055[V],6.95[mA]) entspricht.\\
 
 Den Arbeitswiderstand wird über die Formel:
@@ -39,7 +39,7 @@ Unsere Messung ergaben folgende Werte:\\
 \input{tab_a2.2}
 \end{center}
 
-Nun tragen wir \(I_C\) gegen \(U_{CE}\) auf (Abbildung ) um die Kollektor-Widerstandsgerade. Um die Stromverstärkung \(\beta\) zu bestimmen, plotten wir \(I_C\)gegen \(I_B\). \(\beta\) können wir nun von der Steigung ablesen. Das Programm Mathematica liefert uns den Wert:
+Nun tragen wir \(I_C\) gegen \(U_{CE}\) auf (Abbildung 8) um die Kollektor-Widerstandsgerade. Um die Stromverstärkung \(\beta\) zu bestimmen, plotten wir \(I_C\) gegen \(I_B\) (Abbildung 9). \(\beta\) können wir nun von der Steigung ablesen. Das Programm Mathematica liefert uns den Wert:
 
 \begin{equation}
 \notag
@@ -74,5 +74,7 @@ Nun bauen wir den Schaltplan aus Aufgabe 2.2 um und tauschen die zwei 2,2\(k\Ome
 \item Frequenzänderung: Die Frequenz wurde erhöht, was zur Folge hatte, dass die Verstärkung des Transistors verändert wurde und eine Phasenverschiebung von \(\frac{\pi}{2}\) Zustande kommt. Bei einer Verringerung der Frequenz wurde die Phasenverschiebung ebenfalls kleiner.
 \end{itemize}
 
-\newpage
 \subsection{Fazit}
+
+Die geschätzte Werte für den Arbeitswiderstand und den Basisvorwiderstand weichen von den im Versuch gemessenen Werten sehr stark ab; die Werte in Abbildung 9 liegen nicht auf einer Ursprungsgeraden und zwei der Werte sind ganz verschoben. Als Fazit kann man also sagen, dass diese Messungen nicht erfolgreich verliefen. Wahrscheinliche Fehlerursachen liegen in der Qualität des Steckbrettes, welches für einige Wackelkontakte verantwortlich war. Des Weiteren lieferten uns Messgeräte vollkommen abstruse Werte und schalteten sich während der Messung ohne jeden ersichtlichen Grund einfach aus. In Abbildung \ref{dynamisches kennlinienfeld} ist auch zu sehen, dass die zwei äußersten Werte jedes Quadranten weitab von den anderen Messwerten liegen.\\
+
