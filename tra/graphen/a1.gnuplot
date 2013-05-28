@@ -69,4 +69,4 @@ plot file(0) using 1:2:(u($1)):(i_c($2)) with xyerrorbars title 'I_B {/Symbol \2
       file(10) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 1 pt 0,\
       file(11) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 2 pt 0,\
       file(12) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 3 pt 0,\
-      file(13) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 4 pt 0,\
+      file(13) using 4:3:(u($4)):(u($3)) with xyerrorbars axes x1y2 title '' lt 4 pt 0
