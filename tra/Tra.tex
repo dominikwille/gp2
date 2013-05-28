@@ -172,6 +172,18 @@ Da ein Transistor nur im Bereich positiver Emitter-Basis-Ströme verstärkt, mus
 
 \subsection{Stabilisierung}
 
+Die Leitfähigkeit von Halbleitern hängt wie schon zuvor erwähnt, stark von der Temperatur ab, wodurch die Eigen- und Fremderwärmung ebenfalls einen Einfluss darauf hat. Um dem entgegenzuwirken, werden verschiedene Stabilisierungsmethoden eingebaut. Eine der wichtigsten ist die sogenannte Gegenkopplung, bei welcher ein Teil des verstärkten Ausgangssignals invertiert auf den Eingang zurück geführt wird, was wiederum einen Verlust der Gesamtverstärkung verursacht.\\
+Wir wollen eine Parallelgegenkopplung untersuchen. Dabei wird das Maß der Stabilisierung durch die Rückkopplungswirkung \(\alpha=frac{\Delta U_{EB}}{\Delta U_{EC}}\) und die Spannungsverstärkung v beschrieben. Nehmen wir nun an, dass \(\Delta U_{EC}\)' eine Kollektorpotentialänderung ohne Gegenkopplung ist, dann gilt:
+
+\begin{equation}
+\Delta U_{EC}=U_{EC}'-\alpha U_{EC}\cdot v
+\end{equation}
+Die nun nach der tatsächlichen Spannungsänderung aufgelöst, ergibt:
+
+\begin{equation}
+U_{EC}=\frac{U_{EC}'}{1+\alpha \cdot v}
+\end{equation}
+\(\Rightarrow\) je größer der Rückkopplungsfaktor und die Verstärkung desto kleiner ist die tatsächliche Ausgangsspannungsschwankung.
 \newpage
 \section{Aufgabenstellung}
 \subsection*{Aufgabe 1}
