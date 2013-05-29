@@ -23,7 +23,7 @@ Um die Wellenlänge in dieser Aufgabe zu bestimmen, wird der ermittelte Plattena
 \end{tabular}
 \end{center}
 \subsection{Beobachtung}
-Qualitativ zeigte das Bild sowohl beim blauen als auch beim grünen Glas wieder Kreise in der Farbe des Filters, also in diesem Fall blau oder grün. Quantitativ waren die Kreise jedoch kleiner als bei dem roten Filter. Die blauen Kreise waren dabei am kleinsten.
+Qualitativ zeigte das Bild sowohl beim blauen als auch beim grünen Glas wieder Kreise in der Farbe des Filters, also in diesem Fall blau oder grün. Quantitativ waren die Kreise jedoch kleiner als bei dem roten Filter. Die blauen Kreise waren dabei am kleinsten. Da evtl. beim Grünen Farbglas ein Messwert (Messwert bei n = 3) übersehen werden auch die verschobenen Messwerte ausgewertet.
 \subsection{Messwerte und Graphen}
 \begin{center}
 \input{blau_tab}
@@ -38,12 +38,16 @@ Qualitativ zeigte das Bild sowohl beim blauen als auch beim grünen Glas wieder 
 \\
 \includegraphics[width=12cm]{graphen/gruen}
 {\it Abbildung. 3.2: Messwerte mit grünem Farbglas Phywe (8404) aufgetragen über \(j\)}
+\\
+\includegraphics[width=12cm]{graphen/gruen_new}
+{\it Abbildung. 3.2: Messwerte mit grünem Farbglas Phywe (8404) aufgetragen über \(j\)}
 
 \end{center}
 Die Steigungen \(b\) wurde mittels linearer Regression bestimmt zu:
 \begin{align}
 b_{blau} &= \left( 1,411 \pm 0,026 \right)\,mm^2 \notag\\
-b_{grün} &= \left( 1,846 \pm 0,022 \right)\,mm^2 \notag
+b_{grün} &= \left( 1,846 \pm 0,022 \right)\,mm^2 \notag\\
+b_{grün_{verschoben}} &= \left( 1,612 \pm 0,019 \right)\,mm^2 \notag
 \end{align}
 \subsection{Auswertung}
 Um die Wellenlänge aus den gemessenen Daten bestimmen zu können, wird Gleichung \eqref{b} nach \(\lambda\) aufgelöst. Das ergibt:
@@ -64,12 +68,14 @@ Für den Fehler folgt daraus:
 Ausgerechnet ergibt das:
 \begin{align}
 \lambda_{blau} &= \left( 516 \pm 13 \right)\, nm \notag \\
-\lambda_{grün} &= \left( 676 \pm 15 \right)\, nm \notag
+\lambda_{grün} &= \left( 676 \pm 15 \right)\, nm \notag \\
+\lambda_{grün_{verschoben}} &= \left( 590 \pm 14 \right)\, nm \notag
 \end{align}
 
 Zum Vergleich gilt für die Literaturwerte:
 \begin{center}
 \includegraphics[width=8cm]{bilder/IMG_0020}
+
 {\it Abbildung. 3.3: Darstellung der Hauptmaxima einer Cadmium-Lampe}
 \end{center}
 
@@ -77,11 +83,12 @@ Zum Vergleich gilt für die Literaturwerte:
 \subsection{Fazit}
 \begin{align}
 \lambda_{blau} &= \left( 520 \pm 20 \right)\, nm \notag \\
-\lambda_{grün} &= \left( 680 \pm 20 \right)\, nm \notag
+\lambda_{grün} &= \left( 680 \pm 20 \right)\, nm \notag \\
+\lambda_{grün} &= \left( 590 \pm 20 \right)\, nm \notag
 \end{align}
 \begin{center}
 \it Endergebnis für \(\lambda_{blau}\) und \(\lambda_{grün}\)
 \end{center}
-Im Endergebnis wird klar, dass die Linien nicht zuordbar sind. Das hat verschiedene Ursachen. Zum einen ist die Messung des Plattenabstands \(d\) zu ungenau gewesen um eindeutige Zuordnungen zu gewährleisten, zum anderen sind die Ergebnisse nicht plausibel. Ein Grüner Filter sollte Emissionslinien mit kürzeren Wellenlängen passieren lassen als der rote Filter, die Ermittelte Wellenlänge beim grünen Filter ist aber länger. Und auch die mit dem blauen Filter ermittelte Wellenlänge passt nicht ins blaue Spektrum des sichtbaren Lichts.
+Im Endergebnis wird klar, dass die Linien nicht zuordbar sind. Das hat verschiedene Ursachen. Zum einen ist die Messung des Plattenabstands \(d\) zu ungenau gewesen um eindeutige Zuordnungen zu gewährleisten, zum anderen sind die Ergebnisse nicht plausibel. Ein Grüner Filter sollte Emissionslinien mit kürzeren Wellenlängen passieren lassen als der rote Filter, die Ermittelte Wellenlänge beim grünen Filter ist aber länger. Und auch die mit dem blauen Filter ermittelte Wellenlänge passt nicht ins blaue Spektrum des sichtbaren Lichts. Die verschobenen Messwerte beim grünen Filter liefern auch kein akzeptables Ergebnis. Die Wellenlänge kann weder zugeordnet werden noch passt sie ins grüne Farbspektrum des sichtbaren Lichts
 
 Zu sehen ist auch, dass Dominik Wille offensichtlich deutlich schlechter abgelesen hat als Alexander Heinisch, denn die Streuung der Messwerte ist beim grünen Filter am größten.
