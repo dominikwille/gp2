@@ -1,11 +1,15 @@
 \section{Aufgabe 2}
 Nach der Justierung der Apparatur wurden die Radien der Ringe nacheinander von uns aufgenommen, welche anschließend mit der Formel
+
 \begin{equation}
 r=\frac{1}{2}\cdot (\frac{x_{i,links} + x_{a,links}}{2}-\frac{x_{i,rechts} + x_{a,rechts}}{2}) \notag
 \end{equation}
-berechnet wurden. Hierbei bezeichnet: \(x_{i/a,links/rechts}\) den Abstand vom Mittelpunkt bis zum inneren/äußeren Rand vom Kreis nach links/rechts. Da  bei der Messung der Radius des ersten Rings nicht bestimmbar war, wird der Radius des zweiten Rings \(r_{z=2}\) als Referenzwert benutzt. Um eine Ursprungsgerade zu erhalten wird der Parameter \(j = z - 2\) eingeführt.
+
+berechnet wurden. Hierbei bezeichnet: \(x_{i/a,links/rechts}\) den Abstand vom Mittelpunkt bis zum inneren/äußeren Rand vom Kreis nach links/rechts. Da  bei der Messung der Radius des ersten Rings nicht bestimmbar war, wird der Radius des zweiten Rings \(r_{z=2}\) als Referenzwert benutzt. Nicht bestimmbar heißt hier, dass je nach dem wie man durch das Okular schaute entweder ein Kreis oder eine Scheibe sichtbar war und somit kein Radius gemessen werden konnte. Um eine Ursprungsgerade zu erhalten wird der Parameter \(j = z - 2\) eingeführt.
+
 \subsection{Fehlerabschätzung}
 Da es sich um eine optische Messung handelt und nur mit der Genauigkeit der Augen gemessen wurde ist von einem großen Fehler auszugehen. Da die erkennbaren Ringe jeweils innen und außen abgemessen wurden, bietet es sich an, deren halbe Dicke als Fehler zu betrachten. Weil es sich um einen Fehler handelt wird die Quadratsumme herangezogen.
+
 \begin{align}
 \Delta r &= \frac{1}{2} \cdot \sqrt{
 \Delta x_{links}^2 +
@@ -16,7 +20,9 @@ Da es sich um eine optische Messung handelt und nur mit der Genauigkeit der Auge
 \left( \frac{x_{i,rechts} - x_{a,rechts}}{2} \right)^2
 } \notag
 \end{align}
+
 Da nicht \(r\), sondern \( \left( r_0^2 - r_j^2 \right) \) graphisch aufgetragen wird, muss auch dieser Fehler bestimmt werden:
+
 \begin{align}
 \Delta \left( r_0^2 - r_j^2 \right) &= \sqrt{
 \left( \frac{\partial \left( r_0^2 - r_j^2 \right)}{\partial r_0} \cdot \Delta r_0 \right)^2 +
@@ -29,30 +35,35 @@ Da nicht \(r\), sondern \( \left( r_0^2 - r_j^2 \right) \) graphisch aufgetragen
 \end{align}
 \subsection{Gegebenes}
 Gegeben ist die Wellenlänge der roten Spektrallinie mit \(\lambda = 643,9\,nm\) und die Brennweite der Objektivlinse mit \(f = (10\pm 0,5)\,cm\). Der Fehler der Wellenlänge ist schwierig abzuschätzen, da er durch Quantenmechanische Unschärfen der Energie entsteht. Es wird im Rahmen dieser  Aufgabe davon ausgegangen, dass er vernachlässigbar klein ist. Zusammengefasst ergibt sich:
+
 \begin{center}
 \begin{tabular}{rcc}
 \(\lambda\) & \(=\) & \(643,9\, nm\) \\
 \(f\) & \(=\) & \(\left( 10,0 \pm 0,5 \right)\, cm\) \\
 \end{tabular}
 \end{center}
+
 \subsection{Beobachtung}
 Im Okular waren, nach guter Positionierung der Objektivlinse, rote Ringe zu sehen. Diese Ringe wurden dann vermessen, indem das im Okular vorhandene Fadenkreuz jeweils auf die Ränder der Ringe ausgerichtet wurde und die Position notiert wurde. Die Position wurde von der Mikrometerschraube abgelesen, mit der auch die Positionierung vorgenommen wurde.
+
 \subsection{Messwerte und Graph}
 \begin{center}
 \input{rot_tab}
 {\it Tab. 2.1: Messwerte für das rote Farbglas (46 803)}
-\includegraphics[width=12cm]{rot}
+\includegraphics[width=12cm]{graphen/rot}
 \\
 {\it Messwerte mit rotem Glas (46 803) aufgetragen über \(j\)}
 \end{center}
+
 Die Steigung \(b\) wurde mittels linearer Regression bestimmt zu
+
 \begin{equation}
 b = \left( 1,758 \pm 0,035 \right)\,mm^2
 \notag
 \end{equation}
-\subsection{Auswertung}
 
-Um aus den vorhandenen Messungen auf den Abstand \(d\) der Spiegel zu kommen, wird die Gleichung $\eqref{9}$ herangezogen und \(j = z - 2 \) eingesetzt.
+\subsection{Auswertung}
+Um aus den vorhandenen Messungen auf den Abstand \(d\) der Spiegel zu kommen, wird die Gleichung $\eqref{7}$ herangezogen und \(j = z - 2 \) eingesetzt.
 \begin{equation}
 j + 2 = \frac{2d}{\lambda}\left(1 - \frac{r_j^2}{2f^2}\right)
 \label{j+2}

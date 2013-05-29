@@ -13,20 +13,29 @@
 \usepackage{cite}
 \usepackage{url}
 \usepackage{tabularx}
+\usepackage{capt-of}
  
 \title{Fabry-Perot-Etalon}
 \author{Alexander Heinisch, Dominik Wille}
 \begin{document}
 \maketitle
-\vspace{13cm}
+
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=8cm]{bilder/FAP3}}
+\label{ringe}
+\end{minipage}
+\end{center}
+\vspace{7cm}
 \noindent
 \begin{center}
 \begin{tabular}{r l}
-Tutor & Diana Prychnenky  \\
-Durchführung & 08. Mai 2013 \\
+Tutor & Diana Prychynenko  \\
+Durchführung & 08. Mai 2013 von 14-18 Uhr\\
 
 E-Mail Dominik & dominik.wille@fu-berlin.de \\
-E-Mail Alexander & matthias.heinisch@gmx.de \\
+E-Mail Alexander & Matthias.Heinisch@gmx.de \\
 \end{tabular}
 \end{center}
 
@@ -60,13 +69,15 @@ Des Weiteren können wir einen Gangunterschied durch Phasensprünge bei den Refl
 \end{equation}\\
 
 Somit ist ersichtlich, dass nur dann Interfereinsmaxima entstehen, wenn \(\alpha \) oder \(\lambda \) Gl. \eqref{2} erfüllen.
-\begin{figure}[htbp]
-\centering
-\includegraphics[scale=0.3]{FAP1.png}
+
 \begin{center}
-\caption{Aufbau Fabry-Perlot-Interferometer [GP 2 Skript]}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=8cm]{bilder/FAP1}}
+\captionof{figure}{Aufbau Fabry-Perlot-Interferometer [GP 2 Skript]}%
+\label{interferometer}
+\end{minipage}
 \end{center}
-\end{figure}
 
 Die Phasengröße \(\phi \) bezeichnet den Gangunterschied in Einheiten der Wellenlänge, dich sich wie Folgt berechnet
 
@@ -162,33 +173,23 @@ Relative Bestimmung der Wellenlängen der grünen und der dunkelblauen Linie des
 Abschätzung der Linienbreite der Interferenzmaxima für die rote Linie und Vergleich mit der erwarteten instrumentellen Linienbreite.
 
 \newpage
-
-\section{Aufgabe 1}
-Der Aufbau der Apparatur war an sich relativ trivial, da die meisten Linsen etc. schon auf der Schiene befestigt waren. An sich mussten wir nur noch die passende Lampe finden und alle Linsen in die passenden Abständen schieben. Als nächstes mussten wir alle Linsen und den Fabry-Perlot-Etalon in die richtige Höhe bringen, damit der Strahlengang der Cadmium-Lampe ungehindert im Okular ankam. Als wir alle Fehler korrigiert hatten, mussten wir nur noch den Filter in die Halterung einsetzen und das Fadenkreuz im Okular auf den von innen zehnten Ring des Interferenzmusters einstellen.
-
-\begin{figure}[H]
-\includegraphics[width=\textwidth]{IMG_0021}
-\end{figure}
-Aufbau, von links nach rechts: 
-\begin{itemize}
-\item Okular
-\item Objektivlinse $(f=100\pm 2)mm$
-\item Etalon
-\item Farbfilter
-\item 1. Konvexlinse $(f=155\pm 2)mm$
-\item 2. Konvexlinse $(f=120\pm 2)mm$
-\item Cadmium-Lampe
-\end{itemize}
+\input{aufgabe1}
+\newpage
 \input{aufgabe2}
 
 \input{aufgabe3}
 
-\section{Aufgabe 4}
-
 \input{Aufgabe4}
 
 \section{Fazit}
-Im Allgemeinen verlief die Messung selbst relativ gut, nur haben wir entweder dort oder eben bei der Auswertung der Messdaten einen gravierenden Fehler begangen, sodass wir auf vollkommen verkehrte Werte für die roten bzw. blauen Wellenlängen kamen. Auch nach längerem Suchen des Fehlers, fanden wir die Ursache leider nicht. Aufgabe 1 und 4 ergaben hingegen befriedigende Ergebnisse. Auch bei Aufgabe 2 sieht das Ergebnis gut aus, wobei uns ja hier, wie schon zuvor erwähnt, Vergleichswerte fehlen, um dies mit Bestimmtheit sagen zu können.
+Wir sollten als erstes den Plattenabstand des Etalons berechnen und kamen dort auf einen Wert von \(d=(3,7\pm 0,2)mm\). Wir konnten ihn mangels Vergleichswerte nicht überprüfen aber er scheint uns trotzdem als realistisch.\\
+
+In Aufgabe 3 bestimmten wir die Wellenlänge der grünen und dunkelblauen Linie des Cadmium-Spektrums. Im Allgemeinen verlief die Messung selbst relativ gut, nur haben wir entweder dort oder eben bei der Auswertung der Messdaten einen gravierenden Fehler begangen, sodass wir auf vollkommen verkehrte Werte für die roten bzw. blauen Wellenlängen kamen. Ein Versuch das zu korrigieren war\\
+
+Die letzte Aufgabe ergab für die Linienbreite $L=(33.57\pm 2)pm$ und für die Größe $z=11359,1$, was an sich realistisch und somit gute Ergebnisse sind.\\
+
+Aufgabe 1 und 4 ergaben also befriedigende Ergebnisse. Auch bei Aufgabe 2 sieht das Ergebnis gut aus, wobei uns ja hier, wie schon zuvor erwähnt, Vergleichswerte fehlen, um dies mit Bestimmtheit sagen zu können.
+
 \section{Qellenangabe}
 \begin{itemize}
 \item GPII-Skript
