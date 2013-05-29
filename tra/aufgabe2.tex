@@ -31,15 +31,6 @@ Hier hatten wir einen Wert von (\(100.2\pm 0.8)k\Omega\) gemessen. Auf die Unter
 \end{minipage}
 \end{center}
 
-\begin{center}
-\begin{minipage}{\linewidth}
-\centering
-\makebox[0cm]{\includegraphics[width=\textwidth]{graphen/a2.pdf}}
-\captionof{figure}{Kollektor-Widerstandsgerade}%
-\label{transistor}
-\end{minipage}
-\end{center}
-
 Nun überprüfen wir die abgeschätzten Werte, indem wir einen Arbeitswiderstand und einen Basisvorwiderstand in die Schaltung einbauen (siehe Abbildung 6) und eine neue Messreihe aufnehmen. Wir steigern dabei die Werte für \(I_B\) in gleichen Abständen und notieren, wie sich die anderen Größen dazu verhalten. \(U_0\) hielten wir konstant auf (\(12.11\pm 0.09\))
 
 Unsere Messung ergaben folgende Werte:\\
@@ -48,8 +39,17 @@ Unsere Messung ergaben folgende Werte:\\
 \input{tab_a2.2}
 \end{center}
 \newpage
-Nun tragen wir \(I_C\) gegen \(U_{CE}\) auf (Abbildung 8) um die Kollektor-Widerstandsgerade. Um die Stromverstärkung \(\beta\) zu bestimmen, plotten wir \(I_C\) gegen \(I_B\) (Abbildung 9). \(\beta\) können wir nun von der Steigung ablesen. Das Programm Mathematica liefert uns den Wert:
+Und als Vier-Quadranten-Kennlinienfeld:
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{graphen/a2.pdf}}
+\captionof{figure}{Kollektor-Widerstandsgerade}%
+\label{dynamisches kennlinienfeld}
+\end{minipage}
+\end{center}
 
+Nun tragen wir \(I_C\) gegen \(U_{CE}\) auf (Abbildung 8) um die Kollektor-Widerstandsgerade. Um die Stromverstärkung \(\beta\) zu bestimmen, plotten wir \(I_C\) gegen \(I_B\) (Abbildung 9). \(\beta\) können wir nun von der Steigung ablesen. Das Programm Mathematica liefert uns den Wert:
 \begin{equation}
 \notag
 \beta= (124.21\pm 0.33) 
