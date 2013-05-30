@@ -14,19 +14,12 @@
 \usepackage{url}
 \usepackage{tabularx}
 \usepackage{capt-of}
-
+ 
 \title{Transistor}
 \author{Alexander Heinisch, Dominik Wille}
 \begin{document}
 \maketitle
-\begin{center}
-\begin{minipage}{\linewidth}
-\centering
-\makebox[0cm]{\includegraphics[width=8cm]{bilder/tra7}}
-\label{ringe}
-\end{minipage}
-\end{center}
-\vspace{3cm}
+\vspace{13cm}
 \noindent
 \begin{center}
 \begin{tabular}{r l}
@@ -43,41 +36,21 @@ E-Mail Alexander & matthias.heinisch@gmx.de \\
 \newpage
 
 \section{Physikalische Grundlagen}
-Ein Transistor (aus dem engl. transfer resistor) ist ein elektronisches Bauelement, welches zum
-schalten und verstärken von elektrischen Signalen benutzt wird. Er besteht aus einer dreifachen
-Halbleiterschichtfolge (p-n-p oder n-p-n). Da ein p-n-Übergang einer Diode entspricht kann man den 
-Transistor als zwei dieser Dioden, die entgegengesetzt geschaltet sind sehen. Die Elektroden des
-Transistors heißen Emitter, Basis und Kollektor (siehe Abbildung \ref{transistor}). Um die 
-Funktionsweise des Transistor besser zu verstehen, wird zunächst näher auf die Halbleiter 
-eingegangen.
-
-\subsection{Das Bändermodell}
-Um Prozesse in Halbleiten erklären zu können bietet es sich an quantenmechanische Effekte im Festkörper in ein neues Modell, das so genannte Bändermodell zu überführen.
-
-Da in einem Festkörper grundsätzlich eine große Anzahl von Atomen vorhanden ist reicht es nicht aus ein einzelnes Atom zu betrachten. Im Atom außenliegende Elektronen sind im Festkörper nicht an einzelne Atome gebunden sondern wandern durch die überlappenden Wellenfunktionen benachbarter Atome durch den gesamten Festkörper. Die Gesamtheit eines solchen Zustands bezeichnet man als {\it Band}.
-Diese Bänder erstrecken sich demnach über den Gesamten Festkörper. 
+Ein Transistor (aus dem engl. transfer resistor) ist ein elektronisches Bauelement, welches zum schalten und verstärken von elektrischen Signalen benutzt wird. Er besteht aus einer dreifachen Halbleiterschichtfolge (p-n-p oder n-p-n), wobei zwei dieser Dioden entgegengesetzt geschaltet sind. Die Dioden heißen Emitter, Basis und Kollektor (siehe Abbildung 1.1). Um die Funktionsweise des Transistor besser zu verstehen, wird zunächst näher auf die Halbleiter eingegangen.
 
 \subsection{Halbleiter}
-Halbleiter sind, je nach dem welche Temperatur in ihnen herrscht sie haben, Leiter oder Isolatoren. Im allgemeinen verbessert sich die Leitfähigkeit mit steigender Temperatur. Die Leitfähigkeit am absoluten Temperaturnullpunkt von 0 K ist nahezu Null. 
-Das liegt daran, dass sich durch thermische Anregungen Elektronen von den Atomen lösen und somit 
-Lücken in den Leitungsbändern (die oberste teilbesetzte bzw. leere Schicht der Atomhülle) 
-entstehen. Die 
-Schicht darunter bezeichnet man als Valenzband und ist durch eine ''verbotene Zone'' von dem 
-Leitungsband getrennt. Demnach sind die Elektronen dieser beiden Bänder {\it quasifrei} im 
-Festkörper, während die Elektronen darunter an ihren Kern gebunden sind (Atomrümpfe als Ionen). 
-Im Vergleich dazu wird in der Folgenden Grafik der Unterschied zwischen Leiter, 
-Halbleiter und Isolatoren in Bezug 
-auf die ''verbotene Zone'' dargestellt.
+Halbleiter sind, je nach dem welche Temperatur sie haben, Leiter oder Isolatoren. Ihre Leitfähigkeit ist demnach bei dem absoluten Temperaturnullpunkt von 0 K nahezu Null. Das liegt daran, dass sich durch thermische Anregungen Elektronen von den Atomen lösen und somit Lücken in den Leitungsbändern (die oberste teilbesetzte bzw. leere Schicht der Atomhülle) entstehen. Die Schicht darunter bezeichnet man als Valenzband und ist durch eine ''verbotene Zone'' von dem Leitungsband getrennt. Demnach sind die Elektronen dieser beiden Bänder quasifrei im Festkörper, während die Elektronen darunter an den Kern gebunden sind (Atomrümpfe als Ionen). Im Vergleich dazu wird in der Folgenden Grafik der Unterschied zwischen Leiter, Halbleiter und Isolatoren in Bezug auf die ''verbotene Zone'' dargestellt.
 \begin{center}
 \begin{minipage}{\linewidth}
 \centering
-\makebox[0cm]{\includegraphics[width=\textwidth]{bilder/tra2}}
+\makebox[0cm]{\includegraphics[width=\textwidth]{tra2}}
 \captionof{figure}{Unterschied zwischen Leiter, Halbleiter und Isolatoren}%
 \label{halbleiter}
 \end{minipage}
 \end{center}
 
-Wie man sieht, ist bei Isolatoren die ''verbotene Zone'' ziemlich groß und bei Raumtemperatur können keine Elektronen diese Zone passieren. Bei Halbleitern hingegen wird bei Raumtemperatur schon ein kleiner Teil der Elektronen in das Leitungsband bringen.
+
+Wie man sieht, ist bei Isolatoren die ''verbotene Zone'' ziemlich groß und bei Raumtemperatur können keine Elektronen diese Zone passieren. Bei Halbleitern hingegen wird bei Raumtemperatur schon ein kleiner Teil der Elektronen übertragen.
 
 \subsection{Eigenleitung}
 Der Übergang der Elektronen von dem Valenzband zum Leitungsband wird über die Boltzmannverteilung für thermische Anregungen beschrieben. Die daraus berechenbare Leitfähigkeit eines Halbleiters wird als Eigenleitung bezeichnet. Jedes Elektron des Leitungsbandes hinterlässt eine Lücke im Valenzband (''Defektelekronen''), wobei die Dichte n der quasifreien Elektronen und die Anzahl p der Lücken sind gleich groß.\\
@@ -94,7 +67,7 @@ Nun kann man sogenannte Störstellenhalbleiter bauen. Dabei wird ein fünfwertig
 \subsection{p-n-Grenzschicht}
 Befinden sich nun eine p- und eine n-Schicht in direktem Kontakt, so diffundieren Löcher und Elektronen wegen den thermischen Bewegungen in die jeweils entgegengesetzt polarisierten Gebiete. Durch diese ''Wanderungen'' werden die Atome an der Grenzzone neutralisiert und der Rest der Schicht wird polarisiert, was wiederum ein elektrisches Feld erzeugt welches der Diffusion entgegen wirkt.
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{bilder/tra3}
+\includegraphics[width=\textwidth]{tra3}
 \caption{p-n-Grenzschicht und Halbleiterdiode}
 \end{figure}
 
@@ -116,7 +89,7 @@ Es können Trasistoren so gebaut werden, dass fast 100\(\%\) der Elektronen in d
 \begin{center}
 \begin{minipage}{\linewidth}
 \centering
-\makebox[0cm]{\includegraphics[width=\textwidth]{bilder/tra1}}
+\makebox[0cm]{\includegraphics[width=\textwidth]{tra1}}
 \captionof{figure}{Aufbau eines npn-Transistors}%
 \label{transistor}
 \end{minipage}
@@ -136,8 +109,8 @@ U_{EC}=U_{BC}+U_{EB}
 \end{equation}
 
 Somit sind immer vier der sechs Variablen frei wählbar.
-Ist der Transistor in Emitterschaltung, so kann man ihn als Stromverstärker auffassen. In einem Vier-Quadranten-Kennlinienfeld wird die Abhängigkeit der vier Variablen dargestellt\\
-
+Ist der Transistor in Emitterschaltung, so kann man ihn als Stromverstärker auffassen. In einem Vier-Quadranten-Kennlinienfeld wird die Abhängigkeit der vier Variablen dargestellt
+\newpage
 Das Kennlienenfeld beinhaltete in diesen Quadranten folgende Inhalte:\\
 \begin{itemize}
 \item 1. Quadrant: Ausgangswiderstand ($U_{EC}$ über $I_C$) mit Arbeitswiderstand $R_A = \frac{-1}{m}$ (fallende Gerade mit Steigung m)
@@ -149,9 +122,9 @@ Das Kennlienenfeld beinhaltete in diesen Quadranten folgende Inhalte:\\
 \begin{center}
 \begin{minipage}{\linewidth}
 \centering
-\makebox[0cm]{\includegraphics[width=\textwidth]{bilder/tra4}}
+\makebox[0cm]{\includegraphics[width=\textwidth]{tra4}}
 \captionof{figure}{Vier-Quadranten-Kennlinien}%
-\label{kennlinienfeld}
+\label{transistor}
 \end{minipage}
 \end{center}
 
@@ -172,75 +145,27 @@ Das Verhältnis der Spannungsverstärkung v wird dabei beschrieben durch:
 v=\frac{\Delta U_{EC}}{\Delta U_{EB}}=\frac{R_A \cdot \Delta I_C}{\Delta U_{EB}} \vline \cdot\frac{\Delta I_B}{\Delta I_B} =\frac{\beta \cdot R_A}{r_{EB}}
 \end{equation} 
 
-Dabei ist \(r_EB\) der differentielle Eingangswiderstand \(\Delta U_{EB}/\Delta I_B\).
+Dabei ist \(r_EB\) der differentielle Eingangswiderstand \(\Delta U_{EB}/\Delta I_B\). Dieser Verstärker arbeitet allerdings invertierend, es gilt also, dass eine Spannungs- bzw. Stromerhöhung am Eingang eine Spannungserniedrigung am Ausgang bewirkt. Dies liegt an der Erhöhung des Kollektorstroms und an dem größeren Spannungsabfall am Arbeitswiderstand.
 
-\subsection{Arbeitspunkt}
-Da ein Transistor nur im Bereich positiver Emitter-Basis-Ströme verstärkt, muss die Basis mit positivem Gleichstrom überlagert werden, um Wechselstromsignale unverzerrt weiterleiten zu können. Die wird durch den sogenannten ''Arbeitspunkt'' in den Kennlinienfeldern dargestellt. Man nimmt für ihn die halben maximal zulässigen Kollektorströme bzw. die halben Versorgungspannungen.
-
-\subsection{Stabilisierung}
-
-Die Leitfähigkeit von Halbleitern hängt wie schon zuvor erwähnt, stark von der Temperatur ab, wodurch die Eigen- und Fremderwärmung ebenfalls einen Einfluss darauf hat. Um dem entgegenzuwirken, werden verschiedene Stabilisierungsmethoden eingebaut. Eine der wichtigsten ist die sogenannte Gegenkopplung, bei welcher ein Teil des verstärkten Ausgangssignals invertiert auf den Eingang zurück geführt wird, was wiederum einen Verlust der Gesamtverstärkung verursacht.\\
-Wir wollen eine Parallelgegenkopplung untersuchen. Dabei wird das Maß der Stabilisierung durch die Rückkopplungswirkung \(\alpha=frac{\Delta U_{EB}}{\Delta U_{EC}}\) und die Spannungsverstärkung v beschrieben. Nehmen wir nun an, dass \(\Delta U_{EC}\)' eine Kollektorpotentialänderung ohne Gegenkopplung ist, dann gilt:
-
-\begin{equation}
-\Delta U_{EC}=U_{EC}'-\alpha U_{EC}\cdot v
-\end{equation}
-Die nun nach der tatsächlichen Spannungsänderung aufgelöst, ergibt:
-
-\begin{equation}
-U_{EC}=\frac{U_{EC}'}{1+\alpha \cdot v}
-\end{equation}
-\(\Rightarrow\) je größer der Rückkopplungsfaktor und die Verstärkung desto kleiner ist die tatsächliche Ausgangsspannungsschwankung.
+\subsection{•}
 \newpage
-\section{Aufgabenstellung}
-\subsection*{Aufgabe 1}
-Aufnahme und Konstruktion des (statischen) Kennlinienfeldes eines npn-Transistors für eine
-angenommene Betriebsspannung (Versorgungsspannung) von 12 V. Bestimmung der Stromverstärkung für
-den statischen Fall. Aufbau einer Verstärkerstufe mit einer Parallel- Gegenkopplung zur
-Stabilisierung.
+\section{Aufgaben}
+\subsection{Aufgabe 1}
+Aufnahme und Konstruktion des (statischen) Kennlinienfeldes eines npn-Transistors für eine angenommene Betriebsspannung (Versorgungsspannung) von 12 V. Bestimmung der Stromverstärkung für den statischen Fall. Aufbau einer Verstärkerstufe mit einer Parallel- Gegenkopplung zur Stabilisierung.
 
-\subsection*{Aufgabe 2}
-\subsubsection*{Aufgabe 2.1}
+\subsection{Aufgabe 2}
+\subsubsection{Aufgabe 2.1}
 Dimensionierung der Schaltung: Abschätzung des Arbeitswiderstandes und des Basisvorwiderstandes.
-\subsubsection*{Aufgabe 2.2}
-Experimentelle Überprüfung der Kollektor-Widerstandsgeraden durch Variation des
-Basisvorwiderstandes und Bestimmung der Stromverstärkung.
-\subsubsection*{Aufgabe 2.3}
-Verstärkung einer Eingangs-Wechselspannung als Signal. Messung der Spannungsverstärkung und Vergleich mit der theoretischen Erwartung.
+\subsubsection{Aufgabe 2.2}
+Experimentelle Überprüfung der Kollektor- Widerstandsgeraden durch Variation des Basisvorwiderstandes und Bestimmung der Stromverstärkung.
+\subsubsection{Aufgabe 2.3}
+Experimentelle Überprüfung der Kollektor- Widerstandsgeraden durch Variation des Basisvorwiderstandes und Bestimmung der Stromverstärkung.
 
-\newpage
-
-\input{aufgabe1}
-
-\input{aufgabe2}
-
-\newpage
-\section{Fazit}
-In der ersten Aufgabe sollten wir ein Vier-Quadranten-Kennlinienfeld eines npn-Transistors erstellen. Dazu nahmen wir die Größen \(I_B, I_C, U_{EC},\) und \(U_{Be}\) auf. Nachdem ein Messgerät Werte im vollkommen falschen Messbereich ausgab, eine Fehlersuche erfolglos blieb, die Schaltung nochmal neu aufgebaut wurde und wir dadurch sehr viel Zeit verloren hatten, wechselten wir das Messgerät aus und erhielten nun Messwerte im richtigen Messbereich. Durch den Zeitverlust entschlossen wir uns, die aufgenommenen Werte nicht sofort auf das Millimeterpapier zu übertragen. Während der Messung selber fiel mal das eine Messgerät aus weil die Batterie leer war und ein anderes Messgerät schaltete sich ohne ersichtlichen Grund von selbst ab. Auch hatte das etwas veraltete Steckbrett ein paar Wackelkontakte, durch welche wohl einige Sprünge in unseren Messwerten erklärt werden können.\\
-Des weiteren können wir zusammenfassend zum Kennlinienfeld sagen:
-\begin{itemize}
-\item Die Werte im ersten Quadranten entsprachen nicht denen der theoretischen Vorlage
-\item Die Werte des zweiten Quadranten liefern nur unsichere Ergebnisse. Da wir nur vier Spannungen gemessen hatten und demnach nur vier Werte aufnehmen konnten, können wir nichts mit Sicherheit Bestätigen oder Widerlegen.
-\item Auch im dritten Quadranten haben wir nur vier Messwerte und können nichts genaueres über die Qualität der Messung sagen.
-\item Die Werte des vierten Quadranten scheinen ganz gut zu sein. Nur dass der Sprung in der 30\(\mu A\) Linie auf das Austauschen des Messgeräts zurückzuführen ist.
-\end{itemize}
-
-In Aufgabe 2 sah es nicht besser aus. Der geschätzte Wert für den Arbeitswiderstand ist mir \(871,23\Omega\) fast doppelt so groß wie der gemessene Wert von \(464,3\Omega\). Bei dem Basisvorwiderstand erhielten wir einen geschätzten Wert von \(83,5k\Omega\), welcher sich ebenfalls von den gemessenen \(100,2k\Omega\) stark unterscheidet.\\
-
-Bei der Überprüfung der Kollektor-Widerstandsgeraden bauten wir die Schaltung geringfügig um und nahmen erneut Werte für die vier vorher aufgezählten Größen auf. Dabei steigerten wir \(I_B\) jeweils um etwa 10\(\mu A\). Auffällig ist auch hier, dass sich die jeweils letzten beiden Werte für \(I_C, U_{EC},\) und \(U_{Be}\) von den anderen stark unterscheiden. In Abbildung 8 sehen die Ergebnisse sehr vielversprechend aus. In Abbildung 9 hingegen ist klar erkennbar, dass auch hier die alten bekannten Probleme mit Wackelkontakten etc. seltsame Werte verursachten.\\
-
-Zusammenfassend ist zu sagen, dass der Versuch allem Anschein nach nicht erfolgreich gewesen ist. Wackelkontakte und defekte Messgeräte sind soweit wir das beurteilen konnten, die Ursache. Damit haben wir zwar kleine statistische Fehler aber große systematische Fehler.
-
-\section{Quellenangabe}
+\section{Qellenangabe}
 \begin{itemize}
 \item GPII-Skript
-\item Platzskript
-\item Abbildung 4: \(http://141.7.70.48/images/theory_abb5.gif\)
-\item Abbildung 6: \(http://elektroniktutor.de/bauteilkunde/bt_pict/trkennl.gif\)
-\item Mathematica
-\item GNU-Plot
+\item Platzskript 
 \end{itemize}
-
 \vspace{7.0cm}
 
 \begin{tabularx}{\textwidth}[b]{p{5cm} X p{5cm}} \cline{1-1} \cline{3-3}

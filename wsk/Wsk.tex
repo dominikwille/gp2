@@ -12,10 +12,6 @@
 \usepackage{float}
 \usepackage{cite}
 \usepackage{url}
-\usepackage{capt-of}
-%\pagestyle{empty}
-\usepackage{floatflt}
-\usepackage{tabularx}
 
  
 \title{Wechelstromkreis}
@@ -27,10 +23,10 @@
 \begin{center}
 \begin{tabular}{r l}
 Tutor & Sebastian Baum  \\
-Durchführung & 15. Mai 2013 von 14:00 - 18:00 \\
+Durchführung & 15. Mai 2013 \\
 
 E-Mail Dominik & dominik.wille@fu-berlin.de \\
-E-Mail Alexander & Matthias.Heinisch@gmx.de \\
+E-Mail Alexander & matthias.heinisch@gmx.de \\
 \end{tabular}
 \end{center}
 
@@ -38,28 +34,243 @@ E-Mail Alexander & Matthias.Heinisch@gmx.de \\
 \tableofcontents
 \newpage
 
+\section{Ziele des Versuchs}
+In diesem Versuch untersuchen wir Widerstände, Kondensatoren, Spulen und deren Kombination, die Wechselstromkreise. Diese Beschreiben wir durch komplexe Widerstandsoperatoren und Ersatzschaltbilder
 
-\input{ziele}
-\input{grundlagen}
-\input{aufgabenstellung}
+\section{Physikalische Grundlagen}
+\subsection{Strom und Spannung an Widerständen, Kondensatoren und Induktivitäten}
+Ein elektrischer Stromkreis besteht hauptsächlich aus den Bauelementen Kondensator, Spule und Widerstand mit den Messgrößen Kapazität C, Induktivität L und Widerstand R. Sie werden durch folgende Zusammenhänge zwischen Strom I und Spannung U bestimmt:
 
-%\section{Auswertung}
+\begin{equation}
+\label{1}
+Widerstand\ R: U_{R}=-R\cdot I_{R}
+\end{equation}
+\begin{equation}
+\label{2}
+Kapazität\ C: I_C=-C\frac{dU_C}{dt}
+\end{equation}
+\begin{equation}
+\label{3}
+Induktivität\ L: U_{L}=-L\frac{dI_{L}}{dt}
+\end{equation}
+
+dabei sind: \vspace{0,5cm}
+
+\begin{tabular}{l l}
+\(\ U_{R}\) & := Spannung am Widerstand\\
+\(\ R\)		& := Widerstand\\
+\(\ I_{R}\)	& := Strom am Widerstand\\
+\(\ I_{C}\)	& := Strom am Kondensator\\
+\(\ C\)		& := Kapazität des Kondensators\\
+\(\ \frac{dU_{C}}{dt}\)	& := Änderung der Spannung am Kondensator mit der Zeit\\
+\(\ U_{L}\)	& := Spannung an der Spule\\
+\(\ L\)		& := Induktivität der Spule\\
+\(\ \frac{dI_{L}}{dt}\)	& := Änderung des Stroms an der Spule mit der Zeit\\
+\vspace{0,5cm}
+\end{tabular}\\
+
+Die Größen R, C und L sind positiv definiert. Allerdings setzt die Beziehung zwischen Spannung und Strom aufgrund der Kirchhoff'schen Regeln ein Minuszeichen voraus denn jeder Leiter besitzt einen Widerstand, woraus eine Gegenspannung resultiert. Im Falle des Kondensators bewirkt ein positiver Strom eine Erniedrigung der Spannung und in einer Spule wird eine Spannung induziert sobald sich der Strom ändert.
+
+\subsection{Wechselspannung an Widerständen, Kondensatoren 
+Induktivitäten und Impedanzen }
+\subsubsection{Wechselstrom und Wechselspannung}
+Eine Wechselspannung bzw. ein Wechselstrom hat eine charakteristische sinus- oder cosinusförmige Spannung bzw. Strömung. Sie werden wie folgt bezeichnet:
+
+\begin{equation}
+\label{4}
+U_{t}=U_{0}\cdot cos(\omega t+\varphi _{1})\ \ bzw.\ \ I_{t}=I_{0}\cdot cos(\omega t+\varphi _{2})
+\end{equation}
+
+\begin{tabular}{l l}
+\(\ I_{0}\)	&	:= Maximalstrom\\
+\(\ U_{0}\) &	:= Maximalspannung\\
+\(\ \omega\)&	:= Kreisfrequenz\\
+\(\ \varphi\)&	:= verschiedene Phasen
+\end{tabular}\\
+
+Dabei treten in Schaltkreisen mit R, C und L durch Wechselspannungen Wechselströme gleicher Frequenz und Phasenverschiebungen zwischen Strom und Spannung auf. Zum Vereinfachen setzt man daher die Phase der Spannung gleich Null \(\ (\varphi _{1}=0)\) \\
+
+\subsubsection{Impedanz Z}
+Die Impedanz Z (Wechselstromwiderstand) beschreibt das Verhältnis von der Spannungs- zur Stromamplitude.
+
+\begin{equation}
+\label{5}
+Z=\frac{U_{0}}{I_{0}}
+\end{equation}
+
+Setzten wir nun die Gl.\(\ \eqref{4}\) in Gl.\(\ \eqref{1}\) bis \(\ \eqref{3}\) ein, so erhalten wir die Impedanzen der Bauteile und die Phasenverschiebung des Stroms zur Spannung an R, C und L:
+
+\begin{equation}
+Z_{R}=R
+\end{equation}
+\begin{equation}
+\varphi = \pi
+\end{equation}
+
+Für die Kondensatoren gilt des weiteren:
+
+\begin{equation}
+Z_{C}=\frac{1}{\omega C}
+\end{equation}
+\begin{equation}
+\varphi=\frac{-\pi }{2}
+\end{equation}
+
+Der Strom eilt hier der Spannung voraus. Außerdem gilt für Spulen:
+
+\begin{equation}
+Z_{L}=\omega \cdot L\ \ und \ \ \varphi =+\frac{\pi }{2}
+\end{equation}
+
+wobei hier der Strom der Spannung hinterher läuft.
+
+\subsubsection{Wechselstromnetzwerke}
+Hier gelten die gleichen Regeln wie beim Gleichstromfall, nur dass hierfür die komplexe Impedanz benutzt wird.
+Für die Reihenschaltung gilt:
+\begin{equation}
+Z=\mid{ \sum \limits_{i} Z_i} \mid
+\end{equation}
+\begin{equation}
+tan \varphi ={\frac{Im( \sum \limits_{i} Z_{i})}{Re(\sum \limits_{i} Z_{i})}}
+\end{equation}
+und für die Parallelschaltung:
+
+\begin{equation}
+\frac{1}{Z}=\mid{ \sum \limits_{i} \frac{1}{Z_{i}}}\mid 
+\end{equation}
+\begin{equation}
+tan\varphi = {\frac{Im({\sum\limits_{i}{\frac{1}{Z_i}}})}{Re({\sum\limits_{i}{\frac{1}{Z_i}}})}}
+\end{equation}
+
+\subsection{Wechselstromleistung}
+Die Wechselstromleistung ergibt sich aus dem Produkt der Realteile von U und I:
+
+\begin{equation}
+P=Re(U)\cdot Re(I)=\frac{1}{2}(U+U^*)\cdot \frac{1}{2}(I+I^*)
+\end{equation}
+Wenn wir Wechselströme komplex darstellen, ergibt sich:
+
+\begin{equation}
+U(t)_{komplex}=U_{0}e^{i\omega t}
+\end{equation}
+\begin{equation}
+I(t)_{komplex}=I_{0}e^{i\omega t+\varphi}
+\end{equation}
+Für das zeitliche Mittel folgt daraus:
+
+\begin{equation}
+\overline{P}=\frac{1}{4}\left[U_{0}I_{0}(e^{i\varphi }+e^{-i\varphi })\right]
+\end{equation}
+
+Nun führen wir die Effektivwerte für Spannung und Strom ein mit:
+\begin{equation}
+U_{eff}=\frac{U_{0}}{\sqrt{2}}
+\end{equation}
+\begin{equation}
+I_{eff}=\frac{I_{0}}{\sqrt{2}}
+\end{equation}
+
+Und daraus folgt nun für die Leistung P:
+\begin{equation}
+P=U_{eff}I_{eff}cos \varphi
+\end{equation}
+
+\subsection{Leistungsverluste}
+Ideale Spulen und Kondensatoren arbeiten verlustfrei, in realen Spulen hingegen entzieht unter anderem der Widerstand des Drahtes dem System Energie. Auch Wirbelstromverluste in leitenden Materialien und Ummagnetisierungsverluste bei Spulen mit Eisen- oder Ferrimagneten entziehen dem System Energie.
+Der Verlustfaktor d beschreibt das Verhältnis des Verlustwiderstandes zum rein kapazitiven oder induktiven Widerstand:
+
+\begin{equation}
+d=\frac{1}{tan \varphi }
+\end{equation}
+
+\subsection{Ersatzschaltbilder}
+Um die Verluste an realen Kondensatoren und Spulen zu beschreiben, benutzt man Ersatzschaltbilder, welche zum einen die Reihenersatzkombinationen ist\(\ (R_{r} und L_{r}) \):
+
+\begin{equation}
+Z=\sqrt{R_{r}^2+(\omega L_{r})^2}
+\end{equation}
+\begin{equation}
+tan \varphi =-\frac{\omega L_{r}}{R_{r}}
+\end{equation}
+und zum anderen die Parallelkombination\((R_{p}\ und\ L_{p}) \):
+\begin{equation}
+\frac{1}{Z}=\sqrt{\frac{1}{R_{p}^2}+\frac{1}{(\omega L_{p})^2}}
+\end{equation}
+\begin{equation}
+tan\varphi =-\frac{R_{p}}{\omega L_{p}}
+\end{equation}
+\subsection{Filter (Hoch-, Band-, Tiefpass)}
+Die Kombinationen von R-C-L-Gliedern stellen Spannungsteiler dar.
+Ein R-C-L-Bandpass ist ein schwingungsfähiges System, welches ein Impedanzminimum bei Resonanz eines Siebkreises, bzw. ein Maximum bei einem Sperrkreis aufweist.
+
+\subsection{Wechselstrombrücke}
+Eine Wechselstrombrücke (Wheatstonesche Brücke) ermöglicht die Messung von Induktivität und Kapazität, wenn die Impedanz übereinstimmt.\\
+Es gilt:
+\begin{equation}
+\frac{L_{x}}{L_{0}}=\frac{R_{a}}{R_{b}}
+\end{equation}
+\begin{equation}
+\frac{R_{x}+R'}{R}=\frac{R_{a}}{R_{b}}
+\end{equation}
+Mit dem Phasenabgleichwiderstand R' wird bei dem Bauteil die Phase verschoben.
+
+\subsection{Messgleichungen}
+
+\subsubsection{Aufgabe 1}
+Damit die Teilspannung an der Spule und am Kondensator übereinstimmen muss folgendes gelten:
+\begin{equation}
+U_C = U_R 	=>	 U_{ges} = U_C + U_R
+\end{equation}
+Daraus folgt für die Phasenverschiebung:
+\begin{equation}
+\label{ph}
+tan\phi = -{\frac{1}{\omega C R}}
+\end{equation}
+
+\subsubsection{Aufgabe 2}
+Tiefpass:
+\begin{equation}
+{\frac{U_T}{U_G}} = {\frac{R}{{\sqrt{R^2+{\omega}^2 L^2}}}}
+\end{equation}
+Bandpass:
+\begin{equation}
+{\frac{U_B}{U_G}} = {\frac{R}{{\sqrt{R^2+(\omega L - {\frac{1}{\omega C}})^2}}}}
+\end{equation}
+Hochpass:
+\begin{equation}
+{\frac{U_H}{U_G}} = {\frac{R}{{\sqrt{R^2+{\frac{1}{{\omega}^2 C^2}}}}}}
+\end{equation}
+
+\subsubsection{Aufgabe 3}
+Um eine unbekannte Induktivität zu bestimmen, brauchen wir die Gleichungen der Wechselstrombrücke:
+\begin{equation}
+\label{L}
+L_x = {\frac{R_a}{R_b}} L_0
+\end{equation}
+Damit wir den Verlustwiderstand bestimmen können, verwenden wir den Verlustfaktor d, mit:
+\begin{equation}
+\label{d}
+d = {\frac{1}{tan\phi}} = {\frac{R_V}{\omega L}}
+\end{equation}
+
+\newpage
+
+\section{Aufgaben}
+\subsection{Aufgabe 1}
+Aufbau eines R-C-Kreises. Einstellung der charakteristischen Frequenz mit \(\ U_{R}=U_{C} \). Messung der Generator- und der Teilspannung und Bestimmung der Phasenverschiebung. Unabhängige Messung von R und C mit einem Multimeter und Vergleich der Beobachtung am R-C-Kreis mit den theoretischen Erwartungen. 
+
+\subsection{Aufgabe 2}
+Messung des Frequenzbereichs \(\frac{U_{R}}{U_{G}}\)\ (Verbraucherspannung zu Generatorspannung) an einer Tonfrequenzweiche (Drei-Wege-Weiche mit R-L-Weiche mit R-L-Tiefpass, R-C-L-Bandpass und R-C-Hochpass) und Vergleich mit dem theoretischen Verlauf durch unabhängige Messung der Werte der Widerstände, Kapazitäten und Induktivitäten mit Digital-Multimeter
+
+\subsection{Aufgabe 3}
+Messung der Induktivität und des Verlustwiderstandes einer der beiden Spulen aus Aufgabe 2 mit einer Wechselstrombrücke und Vergleich mit der unabhängigen Messung (Digitalmultimeter) von L und dem Gleichgewichtstromwiderstande R der Spule.
+
+\newpage
+\section{Auswertung}
 \input{aufgabe1}
 \newpage
+\subsection{Aufgabe 2}
 \input{aufgabe2}
 \newpage
 \input{aufgabe3}
-
-\section{Qellenangabe}
-\begin{itemize}
-\item GPII-Skript
-\item Platzskript
-\item Die Graphen wurden mit GNU-Plot erstellt
-\item Die Schaltpläne wurden mit XCircuit erstellt
-\end{itemize}
-\vspace{7.0cm}
-
-\begin{tabularx}{\textwidth}[b]{p{5cm} X p{5cm}} \cline{1-1} \cline{3-3}
-Datum, Dominik Wille & & Datum, Alexander Heinisch
-\end{tabularx}
 \end{document}

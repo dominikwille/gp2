@@ -1,0 +1,36 @@
+\documentclass{article}
+\usepackage{indentfirst}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb,amstext,amsmath}
+
+%\renewcommand*{\size@chapter}{\Huge}
+
+\usepackage{cite}
+\usepackage{url}
+\begin{document}
+
+\section{Ergänzende Fragen}
+Wie hängen die Induktionsspannung von der Frequenz ab, wenn an der Feldspule nicht der Strom, sondern die Spannung konstant gehalten wird?
+Beobachten Sie auf dem Oszilloskop die Phasenlage zwischen Feld- und Induktionsspannung in Abhängigkeit von der Frequenz.
+Begründen Sie, warum bei genügend hoher Frequenz die Spannung phasengleich sind. Belasten Sie die Induktionsspule zusätzlich (niederohmig). Warum tritt jetzt auch bei hohen Frequenzen eine Phasenverschiebung auf (Energiebetrachtung).
+
+\vspace{1cm}
+
+Da es nach dem Einschaltvorgang einer Gleichspannnung keine Stromänderung in der Feldspule mehr gegeben hat, gab es auch keine Magnetfeldänderung. Das hat zur Folge, dass keine Spannung in die Induktionsspule induziert wird. Wenn man allerdings bei einer Wechselspannung den Effektivwert konstant hält, kann man währenddessen die Abhängigkeit von der Induktionsspannung und der Frequenz beobachtet.
+Da sich eine Spule in einem Wechselstromkreis durch die Impedanz $Z=\omega L$ beschreiben lässt, kommt man mit dem Effektivwert auf das Ohm'sche Gesetz:
+
+\begin{equation}
+U_{eff}=\omega L I_{eff}=2\pi L I_{eff}
+\end{equation}
+
+Soll die Spannung konstant bleiben, muss im Umkehrschluss bei einer Erhöhung der Frequenz der Effektivwert des Stroms kleiner werden. Dies hat widerum zur Folge, dass die Induktionsspannung abnimmt, da sie proportional zum Strom ist.
+
+Die Gesetze der Wechselstromkreise besagen, dass eine Spule eine Phasenverschiebung von $\dfrac{\pi}{2}$ zwischen Spannung und Strom verursacht. Da sich nun unser Magnetfeld in Phase mit dem Stron ändert, ändert sich auch die Induktionsspannung in Phase mit dem Strom. Daraus folgt, dass der Phasenunterschied zwischen Feld- und Induktionsspannung $\dfrac{\pi}{2}$ beträgt.
+
+Wenn wir jetzt in den kHz- bzw MHz-Bereich gehen, treten Resonanzphänomene auf. Diese Phänomene verursachen eine weitere Phasenverschiebung, da sich das System nun wie ein R-C-L-Kreis verhält. Um nun aus der Blindleistung im Primärkreislauf eine Verlustleistung wird, die wir benötigen damit Energie in den Sekundärkreislauf kommt, muss Strom mithilfe eines Lastwiderstands an der Induktionsspule fließen. Da aber am Lastwiderstand Energie verloren gehen wird, muss ein Teil des Stroms in Phase mit der Spannung sein, wodurch auch bei hohen Frequenzen eine Phasenverschiebung zwischen Feld- und Induktionsspannung folgt.
+
+ 
+\end{document}
