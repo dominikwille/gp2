@@ -20,4 +20,4 @@ d=2.39
 #plot f(x) title 'Theoretischer Verlauf' lt 2 lw 2 , \
 # file lt 2 with xyerrorbars title 'Messwerte' 
 
-plot file using (d-$1):2:(0.05):(10) with xyerrorbars pt 0 title 'Messwerte'
+plot file using (d-$1):2:(0.05):(2) with xyerrorbars pt 0 title 'Messwerte bei U_B=8V'
