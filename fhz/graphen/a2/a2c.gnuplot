@@ -9,7 +9,7 @@ set output 'a2c.pdf'
 file = 'a2c.data'
 
 #set xrange [-8:8]
-#set yrange [-50:500]
+set yrange [0:15]
 set xlabel "U_B in V"
 set ylabel '{/Symbol \176} I_G'
 set zeroaxis
