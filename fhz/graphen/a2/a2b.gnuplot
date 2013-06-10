@@ -14,6 +14,11 @@ set xlabel "U_B in V"
 set ylabel '{/Symbol \176} I_G'
 set zeroaxis
 
+set arrow from 27.00,0 to 27.00,2.3 nohead
+set arrow from 21.85,0 to 21.85,2.3 nohead
+set arrow from 16.75,0 to 16.75,2.3 nohead
+set arrow from 11.75,0 to 11.75,2.3 nohead
+
 #f(x) = a+b*x
 
 #fit f(x) file_fit  via a,b
