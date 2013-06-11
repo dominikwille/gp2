@@ -6,7 +6,7 @@ set encoding utf8
 set terminal pdf enhanced
 set output 'a1.pdf'
 
-file = 'a1.data'
+file = 'a1.data2'
 
 #set xrange [-8:8]
 #set yrange [-50:500]
@@ -32,4 +32,4 @@ set arrow from 36.85,0 to 36.85,2.3 nohead
 #plot file using ($1):2:(0.01):(10) with xyerrorbars pt 0 lt 3 title 'Messwerte der Indigo-Linie',\
 #	f(x) lt 3 lw 3 title ''
 
-plot file using ($2*10):3 title 'Hg bei 190 {/Symbol \260}C'
+plot file using ($1*10):2 title 'Hg bei 190 {/Symbol \260}C'
