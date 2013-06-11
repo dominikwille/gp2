@@ -17,4 +17,4 @@ set zeroaxis
 f(x) = a+b*x
 fit f(x) file via a, b
 
-plot file title 'Kanten der Franck-Herz-Kurve' lt 1, f(x) title '' lw 3 lt 1
+plot file title 'Kanten der Franck-Hertz-Kurve bei 190 {/Symbol \260}C' lt 1, f(x) title '' lw 3 lt 1
