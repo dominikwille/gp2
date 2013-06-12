@@ -9,7 +9,7 @@ set output 'graph_b.pdf'
 file = 'graph_b.data'
 
 #set xrange [-8:8]
-#set yrange [-50:500]
+set yrange [0:40]
 set xtics 0, 1
 set xlabel "Ordnung n"
 set ylabel 'U_B [V]'

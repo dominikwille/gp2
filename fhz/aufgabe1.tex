@@ -47,13 +47,77 @@ Die so gefunden Spannungen \(U_B\) der Minima werden nun tabelliert und anschlie
 \begin{center}
 \begin{tabular}{c|c|c|c|c}
 Minimum & \(T=190\,^\circ C\) & \(T=155\,^\circ C\) & \( T=185\,^\circ C\) & \(T=205\,^\circ C\)\\\hline
-\(0\) & \(11,85\, V\) & \(11,85\, V\) & \(11,85\, V\) & \(11,85\, V\)\\
-\(1\) & \(21,90\, V\) & \(11,85\, V\) & \(11,85\, V\) & \(11,85\, V\)\\
-\(2\) & \(26,65\, V\) & \(11,85\, V\) & \(11,85\, V\) & \(11,85\, V\)\\
-\(3\) & \(31,50\, V\) & \(11,85\, V\) & \(11,85\, V\) & \(11,85\, V\)\\
-\(4\) & \(36,85\, V\) & \(11,85\, V\) & \(11,85\, V\) & \(11,85\, V\)\\
+\(0\) & \(16,85\, V\) & \(11,85\, V\) & \(11,75\, V\) & \(16,50\, V\)\\
+\(1\) & \(21,90\, V\) & \(16,85\, V\) & \(16,75\, V\) & \(21,50\, V\)\\
+\(2\) & \(26,65\, V\) & \(21,80\, V\) & \(21,85\, V\) & \(26,80\, V\)\\
+\(3\) & \(31,50\, V\) & \(27,00\, V\) & \(27,00\, V\) & \(32,35\, V\)\\
+\(4\) & \(36,85\, V\) & \(-\) & \(-\) & \(-\)\\
 \end{tabular}
 \captionof{table}{Minima von \(U_B\) der aufgenommenen Franck-Hertz-Kurven}
-\end{center} 
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{graphen/a1/graph}}
+\captionof{figure}{Minima der Franck-Hertz-Kurve bei (\(T=190\,^\circ C\))}
+\label{graph_a1}
+\end{minipage}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{graphen/a2/graph_a}}
+\captionof{figure}{Minima der Franck-Hertz-Kurve bei (\(T=155\,^\circ C\))}
+\label{graph_a2a}
+\end{minipage}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{graphen/a2/graph_b}}
+\captionof{figure}{Minima der Franck-Hertz-Kurve bei (\(T=185\,^\circ C\))}
+\label{graph_a2b}
+\end{minipage}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{graphen/a2/graph_c}}
+\captionof{figure}{Minima der Franck-Hertz-Kurve bei (\(T=205\,^\circ C\))}
+\label{graph_a2c}
+\end{minipage}
+\end{center}
+\newpage
+Ermittelt wurden so folgende Steigungen:
+\begin{center}
+\begin{tabular}{c|c}
+Temperatur \(T\) & Steigung \(b\)\\\hline
+\(190\, ^\circ C\) & \(\left( 4,960 \pm 0,057 \right) \, V\) \\
+\(155\, ^\circ C\) & \(\left( 5,040 \pm 0,038 \right) \, V\) \\
+\(185\, ^\circ C\) & \(\left( 5,085 \pm 0,024 \right) \, V\) \\
+\(205\, ^\circ C\) & \(\left( 5,285 \pm 0,087 \right) \, V\) \\
+\end{tabular}
+\captionof{table}{Die Steigungen der aufgetragen Minima}
+\end{center}
 \subsection{Auswertung}
-\subsection{Fazit}
+Wie in den theoretischen Grundlagen erklärt, wechselwirken die Elektronen ab einer Bestimmten Energie mit den Quecksilberatomen und geben dabei ihre kinetische Energie ab. Durch Variation der Beschleunigungsspannung \(U_B\) konnte festgestellt werden, dass dies dazu führt, dass in bestimmten Intervallen der Gegenstrom \(I\) abbricht. Das ist erklärbar, denn verlieren die Elektronen ihre kinetische Energie kurz vor dem Gitter \(G\), so haben sie nicht mehr genügend Energie um das Gegenfeld zu passieren. Die Spannungsintervalle in denen das geschieht sind in unserem Fall genau die Steigungen \(b\) der gegen die Ordnung \(n\) aufgetragenen Minima. Die Energie der Elektronen, die mit einem Quecksilberatom wechselwirken entspricht genau der Energie, die sie durch das Elektrische Potential dieser Intervalle aufgenommen haben. daher gilt:
+\begin{align}
+E_{kin} &= \Delta U \cdot q \\
+&= b \cdot e^- 
+\end{align}
+Die Spannungen lassen sich daher sehr einfach in Energien in \(eV\) umrechnen:
+\begin{center}
+\begin{tabular}{c|c}
+Temperatur \(T\) & Aufnahmeenergie \(E_{Hg}\)\\\hline
+\(190\, ^\circ C\) & \(\left( 4,960 \pm 0,057 \right) \, eV\) \\
+\(155\, ^\circ C\) & \(\left( 5,040 \pm 0,038 \right) \, eV\) \\
+\(185\, ^\circ C\) & \(\left( 5,085 \pm 0,024 \right) \, eV\) \\
+\(205\, ^\circ C\) & \(\left( 5,285 \pm 0,087 \right) \, eV\) \\
+\end{tabular}
+\captionof{table}{Die Aufnahmeenergien von Quecksilber}
+\end{center}
+\subsection{Zwischenfazit}
+Der Franck-Hertz-Versuch konnte mit der Quecksilberröhre  sehr gut durchgeführt werden, es ist zu sehen, dass bei verschiedenen Temperaturen die Aufnahmeenergie sich zu ändern scheint. Physikalisch erklärbar ist das von diesem Standpunkt aus aber nicht und es ist davon auszugehen, dass es sich wohl eher um Messfehler als um tatsächliche Effekte handelt. Außerdem ist der Fehler nur aus der Streuung der Messwerte errechnet worden, und da teilweise nur 4 Messwerte vorhanden waren ist dieser natürlicherweise klein, daher ist es auch möglich, dass der angegebene Fehler zu klein gewählt ist. Im Endergebnis steht:
+\begin{center}
+\begin{tabular}{c|c}
+Temperatur \(T\) & Aufnahmeenergie \(E_{Hg}\)\\\hline
+\(190\, ^\circ C\) & \(\left( 4,96 \pm 0,06 \right) \, eV\) \\
+\(155\, ^\circ C\) & \(\left( 5,04 \pm 0,04 \right) \, eV\) \\
+\(185\, ^\circ C\) & \(\left( 5,09 \pm 0,03 \right) \, eV\) \\
+\(205\, ^\circ C\) & \(\left( 5,29 \pm 0,09 \right) \, eV\) \\
+\end{tabular}
+\captionof{table}{Die Aufnahmeenergien von Quecksilber}
+\end{center}
+Der Literaturwert liegt bei in etwa \(4,9\, eV\) und entspricht der  \(253\, nm\) Absorptionslinie des Quecksilbers, die im UV-Bereich liegt und damit nicht sichtbar ist.
