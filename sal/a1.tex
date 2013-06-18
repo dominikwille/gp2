@@ -1,0 +1,37 @@
+\subsection{Aufgabe 1}
+Um die Laufzeit der Schallgeschwindigkeit in Luft zu messen, verbanden wir eine Klatsche mit einem Mikrophon. Das Mikrophon war wiederum mit einem Speicheroszilloskop verbunden, welches die gesammelten Daten an den Computer sendete. Auf dem Rechner wurden anschließend die Daten mit dem Programm PCS100 aufgezeichnet.\\
+Gestartet wurde die Messung durch den Impuls, welcher von der Klatsche über ein Kabel zum Mikrophon gesendet wird.\\
+Die verschiedenen Abstände zwischen dem Mikrophon und der Klatsche werden in der folgenden Tabelle 1 dargestellt. Um möglichst genaue Messwerte zu erhalten, führten wir jede Messung zweimal durch und bildeten den Mittelwert aus den Werten des ersten Schallimpulses. Das Programm des Computers lieferte uns Bilder wie in Abbildung 1 dargestellt. Wir benutzten aber die Werte der dazugehörigen Textdokumente, um den Zeitpunkt der Ankunft der ersten Schallwelle zu bestimmen.
+\\
+\begin{center}
+\begin{minipage}{\linewidth}
+\centering
+\makebox[0cm]{\includegraphics[width=\textwidth]{graphen/a1/100_1.png}}
+\captionof{figure}{Beispielhafte Ausgabe des Programms PCS100}
+\end{minipage}
+\label{test}
+\end{center}
+
+\begin{center}
+\input{tab1}
+\captionof{table}{Messung der Schallgeschwindigkeit in Luft}
+\end{center}
+
+Die Schallgeschwindigkeit wir über die Relation \(c=\frac{l}{t}\) berechnet. Den Fehler erhalten wir über die Gauß'sche Fehlerfortpflanzung
+\begin{equation}
+\notag
+\Delta c_i = \sqrt{\left(\frac{\partial c_i}{\partial l}\right)^2\cdot \left(\Delta l\right)^2+\left(\frac{\partial c_i}{\partial t}\right)^2\cdot \left(\Delta t\right)^2}=\sqrt{\frac{1}{t^2}\left(\Delta s\right)^2+\frac{s^2}{t^4}\left(\Delta t\right)^2}
+\end{equation}
+Für die gemittelte Schallgeschwindigkeit ergibt sich einen Wert von\\
+\(\overline{c}=(343.93 \pm 5.53)\frac{m}{s}\)
+
+Der Fehler des Mittelwerts errechnet sich aus der Standartabweichung des Mittelwerts:
+
+\begin{equation}
+\Delta c=\sqrt{\frac{\sum (c_i-\overline{c})^2}{n(n-1)}}
+\end{equation}
+
+Um den Wert von \(\overline{c}\) zu prüfen, vergleichen wir ihn mit dem Literaturwert, welcher in trockener Luft 343\(\frac{m}{s}\) entspricht. Damit ist der Wert identisch.
+
+\subsection{Fazit}
+Die Messung für diesen Versuch verlief ohne weitere Komplikationen. Der Errechnete Wert der Schallgeschwindigkeit ist absolut identisch mit dem Literaturwert, womit wir diese Aufgabe als gelöst anerkennen können.
