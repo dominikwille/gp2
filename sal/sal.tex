@@ -56,33 +56,29 @@ c=\sqrt{\frac{D}{\rho}}
 Mit der Rückstellkonstanten D und der Dichte \(\rho\).\\
 Nimmt man nun einen Festkörper als Medium, besitzt in diesem jedes Volumenelement eine fest definierte Ruheposition. Nun unterscheidet man zwischen zwei Arten von Wellen in diesem Körper. Die Erste ist die longitudinale Dichtewelle, welche in Ausbreitungsrichtung schwingt. Des Weiteren gibt es die transversale Scherwelle. Sie schwingt im Gegensatz zur Longitudinalwelle senkrecht zur Ausbreitungsrichtung, ist nicht an ein Medium gebunden und kann polarisiert werden (z.B. Licht).In Gasen und Flüssigkeiten treten nur Dichtewellen auf, wodurch die Rückstellkonstante durch das Kompressionsmodul K ausgedrückt wird.\\
 Da zum einen die Periodendauer von Schallwellen in Gasen relativ kurz ist, und zum anderen Gase eine geringe Wärmeleitfähigkeit besitzen, findet kein Energieaustausch zwischen den einzelnen Teilchen statt. Damit gilt die Poisson-Gleichung:
-
 \begin{equation}
 \label{rho}
 \rho \cdot V^{\kappa} = const.
 \end{equation}
-
 welche durch Ableiten einen Ausdruck für die Kompressionsrate K liefert:
-
 \begin{equation}
 \label{K}
 D = K = V \frac{d\rho}{dV}=-\kappa \rho
 \end{equation}
-
 mit dem Isentropenindex 
-
 \begin{equation}
 \label{kappa}
 \kappa = \frac{c_{p}}{c_{v}}
 \end{equation}
-
 Daraus folgt für c:
-
 \begin{equation}
-c=\sqrt{\kappa\frac{p}{\rho}}=c(T)
+c=\sqrt{\kappa\frac{p}{\rho}}=
 \end{equation}
-
-Die Schallgeschwindigkeit ist wegen der Dichte Temperaturabhängig, wobei sie nicht Druckabhängig ist, da sich die Trägheits- und Rückstellgröße im gleichen Maße mit dem Druck ändert.
+Mit \(PV = NRT\) erhält man
+\begin{equation}
+c(T) = \sqrt{\kappa\frac{RT}{M}} \label{c(t)}
+\end{equation}
+Die Schallgeschwindigkeit ist also nur Temperaturabhängig.
 
 \newpage
 \subsection{Stehende Welle}
@@ -121,14 +117,14 @@ Befindet sich der Stab hingegen zu einem viertel seiner Länge vom Rand entfernt
 
 
 \newpage
-\section{Aufgaben}
-\subsection{Aufgabe 1}
+\section{Aufgabenstellung}
+\subsection*{Aufgabe 1}
 Messung der Schallgeschwindigkeit in Luft durch Laufzeitmessung.
-\subsection{Aufgabe 2}
+\subsection*{Aufgabe 2}
 Beobachtung der Resonanzen einer Luftsäule mit abgeschlossenem bzw. offenem Ende durch Variation der Anregungsfrequenz. Berechnung der Schallgeschwindigkeit und des Verhältnisses der spezifischen Wärme \(\frac{c_{p}}{c_{v}}=\kappa\) von Luft (Isentropenindex, Adiabatenkoeffizient).
-\subsection{Aufgabe 3}
+\subsection*{Aufgabe 3}
 Bestimmung der Schallgeschwindigkeit in Metallen aus der Laufzeit bzw. der Grundschwingungsfrequenz für zwei verschiedene Einspannungen des Stabes. Berechnung des Elastizitätsmoduls des Metalls.
-\subsection{Ergänzende Frage}
+\subsection*{Ergänzende Frage}
 Warum werden höhere Frequenzen stärker gedämpft als niedrige?
 
 \newpage
@@ -138,4 +134,9 @@ Warum werden höhere Frequenzen stärker gedämpft als niedrige?
 \input{a2}
 \input{a3}
 \input{fazit}
+
+\section{Quellenangabe}
+\begin{itemize}
+\item Die Schallgeschwindigkeit wurde aus der Formelsammlung des Schulbuchverlags entnommen.
+\end{itemize}
 \end{document}

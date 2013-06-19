@@ -17,4 +17,4 @@ set zeroaxis
 f(x) = a+b*x
 fit f(x) file using 2:($1*10) via a, b
 
-plot file using 2:($1*10):(0.2):(30) title 's-t-Diagramm der Schallgeschwindigkeit in Luft bei T = 25{/Symbol \260}C' with xyerrorbars lt 1 pt 0, f(x) title '' lw 3 lt 1
+plot file using 2:($1*10):(0.2):(30) title 's-t-Diagramm der Schallgeschwindigkeit in Luft bei Zimmertemperatur' with xyerrorbars lt 1 pt 0, f(x) title '' lw 3 lt 1
