@@ -17,4 +17,4 @@ set zeroaxis
 f(x) = a+b*x
 fit f(x) file using 1:2:($2) via a, b
 
-plot file using 1:2:($2*0.1) title 'Resonanzfrequenzen geschlossene Röhre T = 25{/Symbol \260}C' with errorbars lt 1 pt 0
+plot file using 1:2:($2*0.1) title 'Resonanzfrequenzen offene Röhre T = 25{/Symbol \260}C' with errorbars lt 1 pt 0
