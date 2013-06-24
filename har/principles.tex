@@ -10,8 +10,7 @@ F &= m \cdot a\notag\\
 \subsubsection{The Spring Force}
 Robert Hook first described the Force of a spring by its extension. He assumed that for small amplitudes the force will just be linear in the displacement. The spring force therefore is
 \begin{equation}
-F_s = -D \cdot \left( x - x_0 \right)
-\notag
+F_s = -D \cdot \left( x - x_0 \right) \label{gen_spring}
 \end{equation}
 To make it more simple the coordinate system will be chosen so that \(x_o = 0 \). 
 \begin{equation}
@@ -30,6 +29,7 @@ F_f &= - k \frac{d}{dt} x \notag \\
  &= - k \dot x
 \label{friction}
 \end{align}
+\subsection{Equation of Motion for free damped oscillations}
 The force \(F\) that acts on the mass \(m\) is the sum of all forces.
 \begin{align}
 F &= F_s + F_f \notag 
@@ -44,14 +44,13 @@ m\ddot{x} &= -D x - k \dot{x} \notag\\
 \Rightarrow 0 &= D x + k \dot{x} + m\ddot{x}
 \label{eom}
 \end{align}
-\subsection{Solving the Equation of Motion}
-The equation is a ordinary second order linear differential equation. In general all ordinary linear differential equations can be solved with the ansatz
+The equation is a ordinary second order linear differential equation. In general all ordinary linear differential equations can be solved with the ansatz:
 \begin{align}
 x(t) &= ae^{\lambda t} \notag\\
 \Rightarrow \dot{x}(t) &= a \lambda e^{\lambda t} \notag\\
 \Rightarrow \ddot{x}(t) &= a \lambda^2 e^{\lambda t} \notag
 \end{align}
-insertion into \eqref{eom} gives
+insertion into \eqref{eom} gives:
 \begin{align}
 0 &= m a \lambda^2 e^{\lambda t} + k a \lambda e^{\lambda t} + D a e^{\lambda t} &\bigg\vert& \cdot \frac{1}{a} e^{- \lambda t} \notag\\
 0 &= m \lambda^2 + k \lambda + D &\bigg\vert& \cdot \frac{1}{m} \notag\\
@@ -94,7 +93,7 @@ it gives the first form of the solution
 \begin{align}
 x(t) &= Ae^{-\delta t}\cos(\omega_1 t + \varphi_0)\label{x(t)_1}
 \end{align}
-There is an alternate form wich can be derived with angle identity \(\cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \).
+There is an alternate form which can be derived with angle identity \(\cos(\alpha + \beta) = \cos \alpha \cos \beta - \sin \alpha \sin \beta \).
 \begin{align}
 x(t) &= Ae^{-\delta t}\left( \cos(\varphi_0)\cos(\omega_1 t) - \sin(\varphi_0)\sin(\omega_1 t) \right) \notag
 \end{align}
@@ -105,4 +104,32 @@ A_1 &= A\cos(\varphi_0) && A_2 = -A\sin(\varphi_0) \notag
 it becomes the alternate form
 \begin{align}
 x(t) &= e^{-\delta t}\left(A_1 \cos(\omega_1 t) + A_2 \sin(\omega_1 t) \right) \label{x(t)_2}
+\end{align}
+\subsection{Equation of Motion for driven harmonic oscillations}
+To investigate the resonance phenomena it is very useful to have a simple model in which the position of the equilibrium \(x_o\) moves harmonically.
+\begin{align}
+x_0(t) = A_0\cos \left( \Omega t\right)
+\end{align}
+So the spring force \eqref{gen_spring} becomes:
+\begin{align}
+F_s = -D\left(x -x_0(t) \right)
+\end{align}
+The equation of motion can be derived buy just adding all forces together:
+\begin{align}
+F &= F_s + F_f \notag\\
+m \ddot{x} = F &= -D\left(x -x_0(t) \right) -k \dot{x} \notag \\
+0 &= m \ddot{x}  + k \dot{x} + D\left(x -x_0(t) \right) \notag \\
+0 &= m \ddot{x}  + k \dot{x} + Dx -DA_0\cos \left( \Omega t\right) \notag
+\end{align}
+With the definition \(DA_0 =: F_0\) the equation can easily be written as:
+\begin{align}
+\Rightarrow F_0 \cos \left( \Omega t \right) &= m \ddot{x} + k \dot{x} + Dx
+\end{align}
+It is absolutely clear that this is just a inhomogeneous version of the equation in the free damped oscillating case \eqref{eom}. So it is only necessary to derive a special solution for this equation. The general solution will be the sum of the general homogeneous solution \eqref{x(t)_1} and the special solution of the inhomogeneous equation.
+
+The ansatz for this situation is chosen as:
+\begin{align}
+x(t) &= F \cdot e^{i(\Omega t + \phi)} \\
+\dot{x}(t) &= i \Omega \cdot A_s \cdot e^{i(\Omega t + \phi)} \\
+\ddot{x}(t) &= - \Omega^2 \cdot A_s \cdot e^{i(\Omega t + \phi)} \\
 \end{align}
