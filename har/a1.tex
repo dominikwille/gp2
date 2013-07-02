@@ -1,0 +1,29 @@
+\newpage
+\section{Exercise 1}
+In this task the oscillator will be deflected by hand to an amplitude near the maximum. The position resp. Angular of the flywheel Is measured and plotted with CASSY-Lab. 
+\subsection{Observation}
+The measured curves fit nearly perfectly the expectations of a exponential decreasing sin function. To process the data The envelope function will is fitted with a \(f(x)=A*e^{-x/B}+C\) function. The frequency  is measured just by counting the periods per time interval.
+\subsection{Errors}
+The equipment does not provide data which is totally free of systematic errors. There is a lot of friction which is not only dependent on the wheels velocity. But the systematic errors are not so significant that the data can not be evaluated.
+
+It is assumed that the time is measured relatively correct \(\Delta t = 0.01\, s\). 
+\subsection{Measured Data}
+\begin{center}
+\begin{tabular}{c|cccccc}
+Position & \(B [s]\) & \(N\) & \(t_1 [s]\) & \(t_2 [s]\) & \(T [s]\) & \(\omega_1 [\frac{1}{s}]\) \\ \hline
+3 & \(5.12\) & \(6\) & \(1.72 \pm 0.01\) & \(13.6 \pm 0.01\) & \(11.88\) & \(0.50505 \pm 0.00060\) \\ 
+2 & \(5.41\) & \(6\) & \(13.90 \pm 0.01\) & \(1.68 \pm 0.01\) & \(12.22\) & \(0.49099 \pm 0.00056\) \\ 
+1 & \(27.13\) & \(20\) & \(42.00 \pm 0.01\) & \(4.22 \pm 0.01\) & \(37.78\) & \(0.52938 \pm 0.00019\) \\ 
+0 & \(69.13\) & \(20\) & \(50.82 \pm 0.01\) & \(13.16 \pm 0.01\) & \(37.66\) & \(0.53106 \pm 0.00019\) \\
+\end{tabular}
+\captionof{table}{measured values for free damped oscillations}
+\end{center}
+\subsection{Evaluation}
+To determine the damping constant \(\delta\) the formula \eqref{x(t)_1} can be compared with the fitting function \(f(x)=A*e^{-x/B}+C\) and comparison gives:
+\begin{align}
+\delta = \frac{1}{B}
+\end{align}
+Moreover the eigenfrequency \(\omega_0\) can be determined with \eqref{w1} as:
+\begin{align}
+\omega_0 = \sqrt{\omega_1^2 + \delta^2}
+\end{align}
