@@ -26,12 +26,53 @@ Position & \(B [s]\) & \(N [1]\) & \(t_1 [s]\) & \(t_2 [s]\) \\ \hline
 \end{tabular}
 \captionof{table}{measured values for free damped oscillations}
 \end{center}
+\newpage
 \subsection{Evaluation}
 To determine the damping constant \(\delta\) the formula \eqref{x(t)_1} can be compared to the fitting function \(f(x)=A*e^{-x/B}+C\) and gives:
 \begin{align}
 \delta = \frac{1}{B}
 \end{align}
-Moreover the eigenfrequency \(\omega_0\) can be determined with \eqref{w1} as:
+Since \(\omega_1\) is determined as \(\omega_1 = \frac{N}{\left| t_1 - t_2 \right|}\) the eigenfrequency \(\omega_0\) can be determined with \eqref{w1} as:
 \begin{align}
 \omega_0 = \sqrt{\omega_1^2 + \delta^2}
+\end{align}
+All in all that means:
+\begin{center}
+\begin{tabular}{c|cccc}
+Position & \(B\, [s]\) & \(\delta\, [\frac{1}{s}]\) & \(w_1\, [\frac{1}{s}]\) & \(w_0\, [\frac{1}{s}]\) \\\hline
+3 & \(5.12\) & \(0.1953125\) & \(0.505050505050505\) & \(0.541500678954348\) \\ 
+3 & \(5.10\) & \(0.196078431372549\) & \(0.500417014178482\) & \(0.537460639794978\) \\ 
+3 & \(5.13\) & \(0.194931773879142\) & \(0.50125313283208\) & \(0.537822554047006\) \\ 
+2 & \(5.41\) & \(0.184842883548983\) & \(0.490998363338789\) & \(0.524639194494724\) \\ 
+2 & \(5.34\) & \(0.187265917602996\) & \(0.490998363338789\) & \(0.525497779916396\) \\ 
+2 & \(5.40\) & \(0.185185185185185\) & \(0.491400491400491\) & \(0.52513616877979\) \\ 
+1 & \(27.13\) & \(0.036859565057132\) & \(0.529380624669137\) & \(0.530662296862408\) \\ 
+1 & \(26.95\) & \(0.037105751391466\) & \(0.528122524425667\) & \(0.529424439927044\) \\ 
+1 & \(27.23\) & \(0.036724201248623\) & \(0.528960592435863\) & \(0.530233887362406\) \\ 
+0 & \(69.13\) & \(0.014465499783018\) & \(0.531067445565587\) & \(0.531264418555892\) \\ 
+0 & \(68.89\) & \(0.014515894904921\) & \(0.531208499335989\) & \(0.531406794246822\) \\ 
+0 & \(69.23\) & \(0.014444604940055\) & \(0.531208499335989\) & \(0.531404851670238\) \\
+\end{tabular}
+\end{center}
+To get a final value for the damping constants, the average value is used:
+\begin{align}
+\delta = \frac{\sum_{i=0}^n \delta_i}{n}
+\end{align}
+The error of the final damping constants is determined by the variance of the values:
+\begin{align}
+\Delta\delta &= \sqrt{\frac{\sum_{i=0}^n \left( \bar{\delta} -\delta_i\right)^2 }{n-1}}
+\end{align}
+The result is:
+\begin{center}
+\begin{tabular}{ccc}
+\(\delta_0\) & \(=\) &\(\left(0.014475 \pm 0.000037 \right)\)\\
+\(\delta_1\) & \(=\) &\(\left(0.03690 \pm 0.00019 \right)\)\\
+\(\delta_2\) & \(=\) &\(\left(0.1858 \pm 0.0013 \right)\)\\
+\(\delta_3\) & \(=\) &\(\left(0.19544 \pm 0.00058 \right)\)
+\end{tabular}
+\end{center}
+The final eigenfrequency \(\omega_0\) is determined as the average value of the single eigenfrequencies:
+\begin{align}
+\omega_0 &= \frac{\sum_{i=0}^n \omega_{0_i}}{n} = 0.5314 \, \frac{1}{s}\\
+\Delta \omega_0 &= \sqrt{\frac{\sum_{i=0}^n \left( \omega_0 -\omega_{0_i}\right)^2 }{n-1}} = 0.0053\, \frac{1}{s}
 \end{align}
