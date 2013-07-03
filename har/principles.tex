@@ -126,10 +126,22 @@ With the definition \(DA_0 =: F_0\) the equation can easily be written as:
 \Rightarrow F_0 \cos \left( \Omega t \right) &= m \ddot{x} + k \dot{x} + Dx
 \end{align}
 It is absolutely clear that this is just a inhomogeneous version of the equation in the free damped oscillating case \eqref{eom}. So it is only necessary to derive a special solution for this equation. The general solution will be the sum of the general homogeneous solution \eqref{x(t)_1} and the special solution of the inhomogeneous equation.
-
 The ansatz for this situation is chosen as:
 \begin{align}
 x(t) &= F \cdot e^{i(\Omega t + \phi)} \\
 \dot{x}(t) &= i \Omega \cdot A_s \cdot e^{i(\Omega t + \phi)} \\
 \ddot{x}(t) &= - \Omega^2 \cdot A_s \cdot e^{i(\Omega t + \phi)}
 \end{align}
+Now \(A_s\) can easily determined as:
+\begin{align}
+A_s = \frac{F_0}{m} \cdot e^{-i\phi} \cdot \frac{1}{\omega_1^2-\Omega^2 + 2i\delta^2\Omega^2} 
+\end{align}
+And so the angular and the abolute value is given by
+\begin{align}
+\left|A_s\right| &= \frac{F_0}{m \cdot \sqrt{\left(\omega_0^2-\Omega^2\right)^2+4\delta^2\Omega^2}}
+\\ \phi &= -\arctan \left( \frac{2\delta \Omega}{\omega_0^2-\Omega^2} \right)
+\end{align}
+If \(\Omega = \omega_1 \) the equation of motion becomes:
+\begin{align}
+x(t) = A_s(\Omega)(1-e^{-\delta t})\sin(\omega_1 t)
+\end{align} 
